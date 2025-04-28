@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yannieee Portfolio | Contact </title>
+    <meta name="description" content="This is a personal portfolio">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+         *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom right, rgb(226, 167, 167), rgb(45, 36, 36), rgb(151, 109, 116));
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom right, rgb(226, 167, 167), rgb(45, 36, 36), rgb(151, 109, 116));
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar Layout */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 5%;
+            background: linear-gradient(to bottom right, rgb(226, 167, 167), rgb(45, 36, 36), rgb(151, 109, 116));
+            box-shadow: none;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            flex-wrap: wrap; /* helps in smaller screens */
+        }
+        .navbar.scrolled {
+            background-color: transparent !important;
+        }
+
+        .logo {
+            display: block;
+            width: 120px;
+            height: 70px;
+            background-image: url('Img/logo1.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-indent: -9999px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .nav-link {
+            color: #fbfaff;
+            font-size: 23px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .navbar .nav-link:hover {
+            color: #470101;
+            background-color: #ffdfdf;
+            border-radius: 4px;
+            padding: 4px 8px;
+        }
+
+        /* Tablets */
+        @media (max-width: 768px) {
+            .logo {
+                width: 100px;
+                height: 50px;
+            }
+
+            .navbar .nav-link {
+                font-size: 20px;
+            }
+        }
+
+        /* Phones: 480px */
+        @media (max-width: 480px) {
+            .logo {
+                width: 80px;
+                height: 40px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .navbar .nav-link {
+                font-size: 18px;
+            }
+        }
+
+        /* Small phones: 320px */
+        @media (max-width: 320px) {
+            .logo {
+                width: 60px;
+                height: 30px;
+            }
+
+            .nav-links {
+                gap: 8px;
+            }
+
+            .navbar .nav-link {
+                font-size: 16px;
+            }
+        }
+
+        
+        /* Tiles Section for projects*/
+        #pretest {
+            text-align: center;
+            padding: 40px 8%;
+        }
+        #pretest h1 {
+            color: 	#ff9d9d;
+            font-size: 50px;
+            text-align: center;
+            padding: 30px 8%;
+        }
+        #pretest p {
+            font-size: 18px;
+            text-align: center;
+            padding: 10px 5%;
+            letter-spacing: 1.5px;
+        }
+
+        .tiles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 2 columns, making 2 rows with 4 items */
+            gap: 20px;
+            padding: 20px 8%;
+            margin-top: 20px;
+        }
+
+
+        .tile {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, z-index 0.3s;
+            cursor: pointer;
+            object-fit: cover;
+        }
+
+        .tile:hover{
+            transform: scale(1.2); /* Zoom effect */
+            z-index: 10; /* Ensure it's above other elements */
+        }
+
+
+        .tile::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .tile-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Responsive: Switch to 1 column */
+        @media (max-width: 1024px) {
+            .tiles {
+                grid-template-columns: 1fr; /* Switch to 1 column on smaller screens */
+            }
+        }
+
+        /*Pre-test 4 to 5*/        
+        .tiles2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 2 columns, making 2 rows with 4 items */
+            gap: 20px;
+            padding: 20px 8%;
+            margin-top: 20px;
+        }
+
+
+        .tile2 {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, z-index 0.3s;
+            cursor: pointer;
+            object-fit: cover;
+        }
+
+        .tile2:hover{
+            transform: scale(1.2); /* Zoom effect */
+            z-index: 10; /* Ensure it's above other elements */
+        }
+
+
+        .tile2::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .tile-content2 {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Responsive: Switch to 1 column */
+        @media (max-width: 1024px) {
+            .tiles2 {
+                grid-template-columns: 1fr; /* Switch to 1 column on smaller screens */
+            }
+        }
+
+         /*post-test 4*/        
+         .tiles3 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 2 columns, making 2 rows with 4 items */
+            gap: 80px;
+            padding: 20px 8%;
+            margin-top: 20px;
+        }
+
+
+        .tile3 {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, z-index 0.3s;
+            cursor: pointer;
+            object-fit: cover;
+        }
+
+        .tile3:hover{
+            transform: scale(1.3); /* Zoom effect */
+            z-index: 10; /* Ensure it's above other elements */
+        }
+
+
+
+        .tile3::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .tile-content3 {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Responsive: Switch to 1 column */
+        @media (max-width: 1024px) {
+            .tiles3 {
+                grid-template-columns: 1fr; /* Switch to 1 column on smaller screens */
+            }
+        }
+        /* Responsive Styles for Small Screens */
+@media (max-width: 480px) {
+    #pretest {
+        padding: 30px 5%;
+    }
+
+    #pretest h1,
+    .tiles-title {
+        font-size: 28px; /* Smaller title */
+        padding: 10px 0;
+    }
+
+    #pretest p {
+        font-size: 14px;
+        padding: 0 2%;
+        letter-spacing: 1px;
+    }
+
+    .tiles,
+    .tiles2,
+    .tiles3,
+    .tiles4 {
+        grid-template-columns: 1fr; /* Stack tiles vertically */
+        gap: 15px;
+        padding: 10px 5%;
+    }
+
+    .tile,
+    .tile2,
+    .tile3,
+    .tile4 {
+        height: 450px; /* Reduce height */
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .tile-content h3,
+    .tile-content2 h3,
+    .tile-content3 h3,
+    .tile-content4 h3 {
+        font-size: 16px;
+    }
+
+    .tile:hover,
+    .tile2:hover,
+    .tile3:hover,
+    .tile4:hover {
+        transform: none;
+        z-index: auto;
+        cursor: default;
+    }
+
+    /* Specifically target .tile4 for responsive behavior */
+    .tile4 {
+        pointer-events: none; /* Disable click on .tile4 */
+        transform: none; /* Remove zoom effect */
+        z-index: auto; /* Reset z-index */
+    }
+
+    .tile4:hover {
+        cursor: default; /* Ensure no hover effect */
+    }
+}
+
+/* Extra small screens (e.g. older phones) */
+@media (max-width: 320px) {
+    #pretest h1,
+    .tiles-title {
+        font-size: 22px;
+    }
+
+    #pretest p {
+        font-size: 12px;
+    }
+
+    .tile,
+    .tile2,
+    .tile3,
+    .tile4 {
+        height: 300px;
+        font-size: 12px;
+    }
+
+    .tile-content h3,
+    .tile-content2 h3,
+    .tile-content3 h3,
+    .tile-content4 h3 {
+        font-size: 14px;
+    }
+
+    .tile:hover,
+    .tile2:hover,
+    .tile3:hover,
+    .tile4:hover {
+        transform: none;
+        z-index: auto;
+        cursor: default;
+    }
+
+    .tile,
+    .tile2,
+    .tile3,
+    .tile4 {
+        transition: none;
+    }
+
+    /* Specifically target .tile4 for even smaller screens */
+    .tile4 {
+        pointer-events: none; /* Disable click on .tile4 */
+        transform: none; /* Ensure no zoom effect */
+        z-index: auto; /* Reset z-index */
+    }
+}
+
+        /* LONG QUIX*/
+        .tiles-title {
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 30px;
+            color: #333;
+        }
+
+        .tiles4 {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 80px;
+            padding: 20px 8%;
+            margin-top: 20px;
+        }
+
+        .tile4 {
+            position: relative;
+            width: 350px;
+            height: 450px;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, z-index 0.3s;
+            cursor: pointer;
+        }
+
+        .tile4:hover {
+            transform: scale(1.3);
+            z-index: 10;
+        }
+
+        .tile4::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .tiles-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        /* MIDTERM EXAM*/
+        .tiles-title {
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 30px;
+            color: #333;
+        }
+
+        .tiles5 {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 20px 8%;
+            margin-top: 20px;
+        }
+
+        .tile5 { /* Updated class name from .tile5 to .tile4 */
+            position: relative;
+            width: 350px;
+            height: 420px;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, z-index 0.3s;
+            cursor: pointer;
+        }
+
+        .tile5:hover { /* Updated class name from .tile5:hover to .tile4:hover */
+            transform: scale(1.3);
+            z-index: 10;
+        }
+
+        .tile5::before { /* Updated class name from .tile5::before to .tile4::before */
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .tiles-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+
+           /* Responsive: Switch to 1 column */
+           @media (max-width: 1024px) {
+            .tiles5 {
+                grid-template-columns: 1fr; /* Switch to 1 column on smaller screens */
+            }
+        }
+
+        .footer {
+                padding: 20px 5%;
+                background: linear-gradient(to bottom right, rgb(45, 36, 36), rgb(151, 109, 116));
+                color: #fff;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                margin-top: 25px;
+            }
+
+            .footer-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            .footer-social-icons {
+                margin-top: 15px;
+                display: flex;
+                gap: 25px;
+                padding: 0 20px;
+            }
+
+            .footer-social-icons a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #d1b3b3;
+                border-radius: 25%;
+                width: 45px;
+                height: 45px;
+                transition: transform 0.2s;
+                box-shadow: 0 2px 5px rgba(251, 198, 198, 0.1);
+            }
+
+            .footer-social-icons img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .footer-social-icons a:hover {
+                transform: scale(1.1);
+            }
+
+            .footer-nav, .footer-nav1 {
+                margin-top: 15px;
+                gap: 50px;
+                padding: 0 20px;
+            }
+
+            .footer-nav a, .footer-nav1 a, .footer-nav h1, .footer-nav p {
+                color: #ccc;
+                text-decoration: none;
+                font-size: 15px;
+                transition: color 0.3s ease;
+            }
+
+            .footer-nav a:hover, .footer-nav1 a:hover {
+                color: #fff;
+            }
+
+            .copyright {
+                font-size: 14px;
+                margin-top: 20px;
+                color: #aaa;
+            }
+
+            .copyright span {
+                color: #ff9d9d;
+                font-weight: bold;
+            }
+
+            .gotopbtn {
+                position: fixed;
+                width: 40px;
+                height: 40px;
+                background: #f4efde;
+                text-align: center;
+                line-height: 40px;
+                color: #000;
+                font-size: 20px;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: opacity 0.3s ease;
+                bottom: 10px;
+                right: 10px;
+                display: block;
+                z-index: 9999;  /* Ensures it appears above other content */
+                opacity: 1;  /* Makes the button visible */
+            }
+
+            .gotopbtn img {
+                width: 60%;
+                height: 40px;
+                object-fit: cover;
+            }
+
+            .gotopbtn:hover {
+                background: #ffd524;
+                color: #fff;
+            }
+
+            @media (max-width: 480px) {
+
+
+            .footer-content {
+                display: flex; /* Use flexbox for footer */
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center items horizontally */
+                text-align: center;
+                gap: 5px;
+            }
+
+            .footer-social-icons {
+                display: flex; /* Use flexbox for social icons */
+                justify-content: center; /* Center icons */
+                gap: 12px;
+                flex-wrap: wrap;
+            }
+
+            .footer-social-icons a {
+                width: 25px;
+                height: 25px;
+            }
+
+            .footer-social-icons img {
+                width: 20px;
+                height: 20px;
+            }
+
+            .copyright {
+                font-size: 10px;
+                padding: 0 10px;
+                text-align: center; /* Center copyright text */
+            }
+
+            .gotopbtn {
+                width: 32px;
+                height: 32px;
+                font-size: 16px;
+                bottom: 15px;  /* Adjusted positioning to avoid overlap */
+                right: 15px;  /* Adjusted positioning */
+            }
+
+            .gotopbtn img {
+                height: 25px;
+            }
+        }
+                @media (max-width: 320px) {
+
+            .footer-content {
+                display: flex; /* Use flexbox for footer */
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center items horizontally */
+                text-align: center;
+                gap: 4px;
+            }
+
+            .footer-social-icons {
+                display: flex; /* Use flexbox for social icons */
+                justify-content: center; /* Center icons */
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+
+            .footer-social-icons a {
+                width: 20px;
+                height: 20px;
+            }
+
+            .footer-social-icons img {
+                width: 16px;
+                height: 16px;
+            }
+
+            .copyright {
+                font-size: 8px;
+                padding: 0 8px;
+                text-align: center; /* Center copyright text */
+            }
+
+            .gotopbtn {
+                width: 28px;
+                height: 28px;
+                font-size: 14px;
+                bottom: 10px;  /* Slightly adjusted positioning for smaller screens */
+                right: 10px;
+            }
+
+            .gotopbtn img {
+                height: 20px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+ <!-- Navbar -->
+ <nav id="navbar-top" class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container-fluid px-5">
+        <a class="logo" href="Img/logo1.png"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav gap-4" style="font-size: 1.1rem">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="homepage.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="project.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quiz.html">Quizzes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- PRE-TEST -->
+    <section id="pretest">
+        <h1 class="tiles-title">PRE-TEST</h1>
+        <p>Pre-test from 1 to 5</p>
+
+            <div class="tiles">
+                <div class="tile" style="background-image: url('Img/pretest1.jpg');">
+                    <div class="tile-content">
+                        <h3>Pre-test 1 | 10/15</h3>
+                    </div>
+                </div>
+            <div class="tile" style="background-image: url('Img/pretest2.png');">
+                <div class="tile-content">
+                    <h3>Pre-test 2 | 9/15</h3>
+                </div>
+            </div>
+            <div class="tile" style="background-image: url('Img/pretest3.png');">
+                <div class="tile-content">
+                    <h3>Pre-test 3 | 12/15 </h3>
+                </div>
+            </div>
+            
+        </div>
+        <div class="tiles2">
+            <div class="tile2" style="background-image: url('Img/pretest4.png');">
+                    <div class="tile-content2">
+                        <h3>Pre-test 4 | 9/15</h3>
+                    </div>
+                </div>
+                <div class="tile2" style="background-image: url('Img/pretest5.png');">
+                    <div class="tile-content2">
+                        <h3>Pre-test 5 | 14/20</h3>
+                    </div>
+                </div>
+        </div>
+
+        <h1 class="tiles-title">POST-TEST</h1>
+        <p>Post-test from 1 to 5</p>
+
+        <div class="tiles3">
+            <div class="tile3" style="background-image: url('Img/posttest1.jpg');">
+                <div class="tile-content3">
+                    <h3>Post-test 1 | 20/20</h3>
+                </div>
+            </div>
+        <div class="tile3" style="background-image: url('Img/posttest2.jpg');">
+            <div class="tile-content3">
+                <h3>Post-test 2 | 20/20</h3>
+            </div>
+        </div>
+        <div class="tile3" style="background-image: url('Img/posttest3.jpg');">
+            <div class="tile-content3">
+                <h3>Post-test 3 | 19/20 </h3>
+            </div>
+        </div>
+        <div class="tile3" style="background-image: url('Img/posttest4.jpg');">
+            <div class="tile-content3">
+                <h3>Post-test 4 | 16/20 </h3>
+            </div>
+        </div>
+        <div class="tile3" style="background-image: url('Img/posttest5.jpg');">
+            <div class="tile-content3">
+                <h3>Post-test 5 | 19/20 </h3>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="tiles-title">LONG QUIZ</h1>
+    <p>Long Quiz Score | 32/40 </p>
+
+    <div class="tiles4">
+        <div class="tile4" style="background-image: url('Img/longquiz1.1.jpg');"></div>
+        <div class="tile4" style="background-image: url('Img/longquiz1.2.jpg');"></div>
+    </div>
+
+    <h1 class="tiles-title">MIDTERM EXAM</h1>
+    <p>Midterm Score | 32/40 </p>
+
+    <div class="tiles5">
+        <div class="tile5" style="background-image: url('Img/midterm1.1.jpg');"></div>
+        <div class="tile5" style="background-image: url('Img/midterm1.2.jpg');"></div>
+        <div class="tile5" style="background-image: url('Img/midterm1.3.jpg');"></div>
+        <div class="tile5" style="background-image: url('Img/midterm1.4.jpg');"></div>
+    </div>
+
+
+
+</section> 
+<footer class="footer">
+    <hr>
+      <div class="footer-content">
+        <div class="footer-nav">
+            <h2>Get in Touch</h2>
+            <a href="contact.html">julianarosemaloloyon1010@gmail.com</a>
+
+        </div>
+
+        <div class="footer-nav">
+            <h2>Address</h2>
+            <p>Dasmariñas City, Province of Cavite</p>
+        </div>
+
+        <div class="footer-social-icons">
+            <a href="https://www.facebook.com/Yannieee.Rose"><img src="Img/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/yannieeeyy/"><img src="Img/instagram.png" alt="Instagram"></a>
+            <a href="https://x.com/YannieeeRose"><img src="Img/twitter.png" alt="Twitter"></a>
+            <a href="https://www.tiktok.com/@yan.yannieee"><img src="Img/tiktok.png" alt="TikTok"></a>
+        </div>
+    </div>
+    <p class="copyright">Copyright ©2025; Designed by <span>Maloloy-on, Juliana Rose </span></p>
+</footer>
+    <!-- Go To Top Button -->
+    <a class="gotopbtn" href="#"><img src="Img/up-arrow.png" alt="scrollup"></a>
+
+     <!-- JAVASCRIPT -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+ <script>
+     // Internal JavaScript for changing navbar background on scroll
+     window.addEventListener('scroll', function() {
+         const navbar = document.getElementById('navbar-top');
+         if (window.scrollY > 50) {
+             navbar.classList.add('scrolled');
+         } else {
+             navbar.classList.remove('scrolled');
+         }
+     });
+
+
+         function showTab(tabId) {
+            // Get all tab buttons and contents
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            // Remove active class from all tabs and contents
+            tabs.forEach(tab => tab.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            // Add active class to the clicked tab and corresponding content
+            document.querySelector('.tab[onclick="showTab(\'' + tabId + '\')"]').classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+        // Default hide nav on small screens
+        window.addEventListener('resize', () => {
+            const navLinks = document.getElementById("navLinks");
+            if (window.innerWidth <= 480) {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+            }
+            });
+            function toggleNavbar() {
+            const navbarCollapse = document.getElementById('navbarNav');
+            const isExpanded = navbarCollapse.classList.contains('show');
+
+            if (isExpanded) {
+                navbarCollapse.classList.remove('show');
+            } else {
+                navbarCollapse.classList.add('show');
+            }
+        }
+  
+    // Initial state
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.innerWidth <= 480) {
+        document.getElementById("navLinks").style.display = "none";
+      }
+    });
+
+    const goTopBtn = document.querySelector(".gotopbtn");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                goTopBtn.style.display = "block";
+            } else {
+                goTopBtn.style.display = "none";
+            }
+        });
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => tab.classList.remove('active'));
+            contents.forEach(content => content.classList.remove('active'));
+
+            document.querySelector('.tab[onclick="showTab(\'' + tabId + '\')"]').classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+                
+
+   
+    </script>
+
+</body>
+</html>

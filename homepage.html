@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yannieee Portfolio | Homepage</title>
+    <meta name="description" content="This is a personal portfolio">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom right, rgb(226, 167, 167), rgb(45, 36, 36), rgb(151, 109, 116));
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar Layout */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 5%;
+            background: linear-gradient(to bottom right, rgb(226, 167, 167), rgb(45, 36, 36), rgb(151, 109, 116));
+            box-shadow: none;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            flex-wrap: wrap; /* helps in smaller screens */
+        }
+        .navbar.scrolled {
+            background-color: transparent !important;
+        }
+
+        .logo {
+            display: block;
+            width: 120px;
+            height: 70px;
+            background-image: url('Img/logo1.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-indent: -9999px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .nav-link {
+            color: #fbfaff;
+            font-size: 23px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .navbar .nav-link:hover {
+            color: #470101;
+            background-color: #ffdfdf;
+            border-radius: 4px;
+            padding: 4px 8px;
+        }
+
+        /* Tablets */
+        @media (max-width: 768px) {
+            .logo {
+                width: 100px;
+                height: 50px;
+            }
+
+            .navbar .nav-link {
+                font-size: 20px;
+            }
+        }
+
+        /* Phones: 480px */
+        @media (max-width: 480px) {
+            .logo {
+                width: 80px;
+                height: 40px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .navbar .nav-link {
+                font-size: 18px;
+            }
+        }
+
+        /* Small phones: 320px */
+        @media (max-width: 320px) {
+            .logo {
+                width: 60px;
+                height: 30px;
+            }
+
+            .nav-links {
+                gap: 8px;
+            }
+
+            .navbar .nav-link {
+                font-size: 16px;
+            }
+        }
+
+
+        /* HEADER with Background Image */
+        .header {
+            width: 100%;
+            height: 100vh;
+            background-image: url('Img/y1.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 20px 8%;
+            display: block;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            opacity: 0.9;
+        }
+
+        #home {
+            position: absolute;
+            top: 50%;
+            left: -25px;
+            transform: translateY(-50%);
+            z-index: 10;
+            text-align: left;
+            color: white;
+            padding-left: 8%;
+        }
+
+        #home h2.txt1 {
+            font-size: 45px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+            animation: slideFromLeft 3s ease infinite;
+        }
+
+        #home h1 {
+            font-size: 70px;
+            font-weight: 500;
+            opacity: 1;
+        }
+
+        #home h2.txt2 {
+            font-size: 45px;
+            font-weight: 700;
+            color: white;
+            margin-top: 10px;
+            animation: slideFromRight 3s ease infinite;
+        }
+
+        @keyframes slideFromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            80% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideFromRight {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            80% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(0);
+            }
+        }
+
+        section {
+            padding: 50px 8%;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .tiles, .tiles1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px 8%;
+            margin-top: 20px;
+        }
+
+        .tiles-title {
+            font-size: 30px;
+            font-weight: 700;
+            color: #ff9d9d;
+            margin-top: 20px;
+            margin-left: 60px;
+            padding-bottom: 10px;
+            font-family: 'Times New Roman', serif;
+            letter-spacing: 1.5px;
+        }
+
+        .tile, .tile1 {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .tile1 {
+            height: 300px;
+        }
+
+        .tile:hover, .tile1:hover {
+            transform: translateY(-10px);
+        }
+
+        .tile::before, .tile1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .tile-content, .tile-content1 {
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer {
+            padding: 20px 5%;
+            background: linear-gradient(to bottom right, rgb(45, 36, 36), rgb(151, 109, 116));
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .footer-social-icons {
+            margin-top: 15px;
+            display: flex;
+            gap: 25px;
+            padding: 0 20px;
+        }
+
+        .footer-social-icons a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #d1b3b3;
+            border-radius: 25%;
+            width: 45px;
+            height: 45px;
+            transition: transform 0.2s;
+            box-shadow: 0 2px 5px rgba(251, 198, 198, 0.1);
+        }
+
+        .footer-social-icons img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .footer-social-icons a:hover {
+            transform: scale(1.1);
+        }
+
+        .footer-nav, .footer-nav1 {
+            margin-top: 15px;
+            gap: 50px;
+            padding: 0 20px;
+        }
+
+        .footer-nav a, .footer-nav1 a, .footer-nav h1, .footer-nav p {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav a:hover, .footer-nav1 a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            font-size: 14px;
+            margin-top: 20px;
+            color: #aaa;
+        }
+
+        .copyright span {
+            color: #ff9d9d;
+            font-weight: bold;
+        }
+
+        .gotopbtn {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            background: #f4efde;
+            text-align: center;
+            line-height: 40px;
+            color: #000;
+            font-size: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            bottom: 10px;
+            right: 10px;
+            display: block;
+        }
+
+        .gotopbtn img {
+            width: 60%;
+            height: 40px;
+            object-fit: cover;
+        }
+
+        .gotopbtn:hover {
+            background: #ffd524;
+            color: #fff;
+        }
+
+
+        .gotopbtn img {
+            width: 60%;
+            height: 40px;
+            object-fit: cover;
+        }
+
+        .gotopbtn:hover {
+            background: #ffd524;
+            color: #fff;
+        }
+
+        @media (max-width: 480px) {
+            #home {
+                padding: 0 5%;
+                left: 0;
+                width: 100%;
+            }
+
+            #home h1 {
+                font-size: 36px;
+            }
+
+            #home h2.txt1,
+            #home h2.txt2 {
+                font-size: 24px;
+            }
+
+            .tiles, .tiles1 {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .tile, .tile1 {
+                height: 190px;
+                font-size: 14px;
+            }
+
+            .tile-content h3,
+            .tile-content1 h3 {
+                font-size: 16px;
+            }
+
+            .tiles-title {
+                font-size: 10px;
+                margin: 0 auto;
+            }
+
+            .footer-content {
+            display: flex; /* Use flexbox for footer */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            text-align: center;
+            gap: 5px;
+        }
+
+        .footer-social-icons {
+            display: flex; /* Use flexbox for social icons */
+            justify-content: center; /* Center icons */
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .footer-social-icons a {
+            width: 25px;
+            height: 25px;
+        }
+
+        .footer-social-icons img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .copyright {
+            font-size: 10px;
+            padding: 0 10px;
+            text-align: center; /* Center copyright text */
+        }
+
+        .gotopbtn {
+            width: 32px;
+            height: 32px;
+            font-size: 16px;
+            bottom: 15px;  /* Adjusted positioning to avoid overlap */
+            right: 15px;  /* Adjusted positioning */
+        }
+
+        .gotopbtn img {
+            height: 25px;
+        }
+        }
+        @media (max-width: 320px) {
+
+        .footer-content {
+            display: flex; /* Use flexbox for footer */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            text-align: center;
+            gap: 4px;
+        }
+
+        .footer-social-icons {
+            display: flex; /* Use flexbox for social icons */
+            justify-content: center; /* Center icons */
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .footer-social-icons a {
+            width: 20px;
+            height: 20px;
+        }
+
+        .footer-social-icons img {
+            width: 16px;
+            height: 16px;
+        }
+
+        .copyright {
+            font-size: 8px;
+            padding: 0 8px;
+            text-align: center; /* Center copyright text */
+        }
+
+        .gotopbtn {
+            width: 28px;
+            height: 28px;
+            font-size: 14px;
+            bottom: 10px;  /* Slightly adjusted positioning for smaller screens */
+            right: 10px;
+        }
+
+        .gotopbtn img {
+            height: 20px;
+        }
+        }
+            </style>
+</head>
+<body>
+    <!-- Navbar -->
+            <nav id="navbar-top" class="navbar navbar-expand-lg navbar-light sticky-top">
+                <div class="container-fluid px-5">
+                    <a class="logo" href="Img/logo1.png"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav gap-4" style="font-size: 1.1rem">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="homepage.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About Me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="project.html">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="quiz.html">Quizzes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+        <!-- Header Section -->
+        <header class="header">
+           
+                <div id="home">
+                    <h2 class="txt1">Welcome to</h2>
+                    <h1>Yannieee's Portfolio</h1>
+                    <h2 class="txt2">Explore My World</h2>
+                </div>
+            </header>
+    <!--HOME-->
+        <section id="content">
+        <h1 class="tiles-title">Yannieee's Information</h1>
+        <div class="tiles">
+            <div class="tile" style="background-image: url('Img/y2.jpg');" onclick="location.href='about.html';">
+                <div class="tile-content">
+                    <h3>About Me</h3>
+                </div>
+            </div>
+            <div class="tile" style="background-image: url('Img/quiz.png');" onclick="location.href='quiz.html';">
+                <div class="tile-content">
+                    <h3>Quizzes</h3>
+                </div>
+            </div>
+            <div class="tile" style="background-image: url('Img/y5.jpg');" onclick="location.href='project.html';">
+                <div class="tile-content">
+                    <h3>Projects</h3>
+                </div>
+            </div>
+            <div class="tile" style="background-image: url('Img/y6.jpeg');" onclick="location.href='contact.html';">
+                <div class="tile-content">
+                    <h3>Contact</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <footer class="footer">
+    <hr>
+    <div class="footer-content">
+      <div class="footer-nav">
+          <h2>Get in Touch</h2>
+          <a href="contact.html">julianarosemaloloyon1010@gmail.com</a>
+
+      </div>
+
+      <div class="footer-nav">
+          <h2>Address</h2>
+          <p>Dasmariñas City, Province of Cavite</p>
+      </div>
+
+      <div class="footer-social-icons">
+          <a href="https://www.facebook.com/Yannieee.Rose"><img src="Img/facebook.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/yannieeeyy/"><img src="Img/instagram.png" alt="Instagram"></a>
+          <a href="https://x.com/YannieeeRose"><img src="Img/twitter.png" alt="Twitter"></a>
+          <a href="https://www.tiktok.com/@yan.yannieee"><img src="Img/tiktok.png" alt="TikTok"></a>
+      </div>
+  </div>
+  <p class="copyright">Copyright ©2025; Designed by <span>Maloloy-on, Juliana Rose </span></p>
+</footer>
+
+    <!-- Go To Top Button -->
+    <a href="#" class="gotopbtn"><img src="Img/up-arrow.png" alt="Go to top"></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Internal JavaScript for changing navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar-top');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        
+        // Default hide nav on small screens
+        window.addEventListener('resize', () => {
+        const navLinks = document.getElementById("navLinks");
+        if (window.innerWidth <= 480) {
+            navLinks.style.display = 'none';
+        } else {
+            navLinks.style.display = 'flex';
+        }
+        });
+    
+        // Initial state
+        document.addEventListener('DOMContentLoaded', () => {
+        if (window.innerWidth <= 480) {
+            document.getElementById("navLinks").style.display = "none";
+        }
+        });
+
+        const goTopBtn = document.querySelector(".gotopbtn");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 300) {
+                    goTopBtn.style.display = "block";
+                } else {
+                    goTopBtn.style.display = "none";
+                }
+            });
+
+    </script>
+</body>
+</html>
