@@ -516,8 +516,8 @@
             });
 
             // ================= ABOUT SECTION (FIXED) =================
-            const aboutImg = document.getElementById("about-img");
-            if (!aboutImg) return;
+            const aboutimg = document.getElementById("about-img");
+            if (!aboutimg) return;
 
             // Map each tab to its own set of images
             const tabImages = {
@@ -554,8 +554,8 @@
                 currentIndex = (currentIndex + 1) % currentImages.length;
                 aboutImg.style.opacity = 0; // start fade out
                 setTimeout(() => {
-                    aboutImg.src = currentImages[currentIndex]; // change image
-                    aboutImg.style.opacity = 1; // fade in
+                    aboutimg.src = currentImages[currentIndex]; // change image
+                    aboutimg.style.opacity = 1; // fade in
                 }, 300); // matches CSS transition duration
             }, 3000);
             // Tabs functionality (GLOBAL for onclick)
@@ -579,19 +579,19 @@
                 currentIndex = 0;
 
                 // Fade in the first image immediately
-                aboutImg.style.opacity = 0;
+                aboutimg.style.opacity = 0;
                 setTimeout(() => {
-                    aboutImg.src = currentImages[currentIndex];
-                    aboutImg.style.opacity = 1;
+                    aboutimg.src = currentImages[currentIndex];
+                    aboutimg.style.opacity = 1;
                 }, 300);
 
                 clearInterval(slideshow);
                 slideshow = setInterval(() => {
                     currentIndex = (currentIndex + 1) % currentImages.length;
-                    aboutImg.style.opacity = 0;
+                    aboutimg.style.opacity = 0;
                     setTimeout(() => {
-                        aboutImg.src = currentImages[currentIndex];
-                        aboutImg.style.opacity = 1;
+                        aboutimg.src = currentImages[currentIndex];
+                        aboutimg.style.opacity = 1;
                     }, 300);
                 }, 3000);
             };
@@ -608,7 +608,7 @@
             tile.addEventListener('click', () => {
                 const bgImage = tile.style.backgroundImage;
                 const imageUrl = bgImage.slice(5, -2); // remove url(" ")
-                lightboxImg.src = imageUrl;
+                lightboximg.src = imageUrl;
                 lightbox.classList.add('active');
             });
         });
