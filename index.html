@@ -71,7 +71,7 @@
             <div class="aboutme">
                 <!-- Left -->
                 <div class="profile-section">
-                    <img id="about-img" srcimgmg/pic1.jpg" alt="Yannieee" class="profile-img">
+                    <img id="about-img" src="img/pic1.jpg" alt="Yannieee" class="profile-img">
                 </div>
 
                 <!-- Right -->
@@ -402,35 +402,35 @@
             </p>
 
             <div class="tiles1">
-                <div class="tile1" style="background-image: url('img/pitik/pitik1.JPG');">
+                <div class="tile1" style="background-image: url('img/pitik/pitik1.jpg');">
                     </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik2.JPG');">
+                    <div class="tile1" style="background-image: url('img/pitik/pitik2.jpg');">
                     </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik3.JPG');">
+                    <div class="tile1" style="background-image: url('img/pitik/pitik3.jpg');">
                     </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik4.JPG');">
+                    <div class="tile1" style="background-image: url('img/pitik/pitik4.jpg');">
                     </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik5.JPG');">
+                    <div class="tile1" style="background-image: url('img/pitik/pitik5.jpg');">
                     </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik6.JPG');">
+                    <div class="tile1" style="background-image: url('img/pitik/pitik6.jpg');">
                     </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik7.JPG');">
+                    <div class="tile1" style="background-image: url('img/pitik/pitik7.jpg');">
                     </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik8.JPG');">
+                    <div class="tile1" style="background-image: url('img/pitik/pitik8.jpg');">
                     </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik9.JPG');">
+                    <div class="tile1" style="background-image: url('img/pitik/pitik9.jpg');">
                     </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik10.JPG');">
+                    <div class="tile1" style="background-image: url('img/pitik/pitik10.jpg');">
                     </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik11.JPG');">
+                    <div class="tile1" style="background-image: url('img/pitik/pitik11.jpg');">
                     </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik12.JPG');">
+                    <div class="tile1" style="background-image: url('img/pitik/pitik12.jpg');">
                     </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik13.JPG');">
+                    <div class="tile1" style="background-image: url('img/pitik/pitik13.jpg');">
                     </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik14.JPG');">
+                    <div class="tile1" style="background-image: url('img/pitik/pitik14.jpg');">
                     </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik15.JPG');">
+                    <div class="tile1" style="background-image: url('img/pitik/pitik15.jpg');">
                     </div>
 
 
@@ -552,7 +552,7 @@
 
             let slideshow = setInterval(() => {
                 currentIndex = (currentIndex + 1) % currentImages.length;
-                aboutImg.style.opacity = 0; // start fade out
+                aboutimg.style.opacity = 0; // start fade out
                 setTimeout(() => {
                     aboutimg.src = currentImages[currentIndex]; // change image
                     aboutimg.style.opacity = 1; // fade in
@@ -608,7 +608,7 @@
             tile.addEventListener('click', () => {
                 const bgImage = tile.style.backgroundImage;
                 const imageUrl = bgImage.slice(5, -2); // remove url(" ")
-                lightboximg.src = imageUrl;
+                lightboxImg.src = imageUrl; // must match your const lightboxImg
                 lightbox.classList.add('active');
             });
         });
