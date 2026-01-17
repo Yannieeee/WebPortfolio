@@ -16,7 +16,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    color: #fff; /* general text color white */
+    color: #fff;
     overflow-x: hidden;
 }
 
@@ -1046,264 +1046,49 @@ body {
 }
 
 
-/* PHONES */
-@media (max-width: 480px) {
+/* ===== TILES & IMAGES ===== */
+.tile,
+.tile1,
+.tile2,
+.education-tile,
+.profile-img,
+.home-right img,
+.contact-image img {
+    overflow: hidden;
+    border-radius: 15px;
+    object-fit: cover;
+}
 
-    .logo img {
-        width: 60px;
-    }
-
-    .home-left h1 {
-        font-size: 36px;
-    }
-
-    .home-left h2 {
-        font-size: 24px;
-    }
-
-    .home-left .intro {
-        font-size: 16px;
-    }
-
-    .home-right img {
-        width: 100%;
-        max-width: 400px;
-    }
-
-    .tiles {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 15px;
-    }
-
-    .tiles-title {
-        font-size: 24px;
-        margin-bottom: 25px;
-    }
-
-    .tile {
-        height: 150px;
-    }
-
-    .tile-content h3 {
-        font-size: 15px;
-    }
-    .aboutme {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .about-section {
-        padding: 20px;
-    }
-    .profile-section {
-        width: 100%;
-    }
-
-    .profile-img {
-        width: 100%;
-        height: auto;          /* ✅ FIX */
-        aspect-ratio: 4 / 3;
-        border-radius: 16px;
-    }
-
-    .about-img {
-        width: 180px;
-        height: 180px;
-    }
-
-    .about-right h2 {
-        font-size: 22px;
-    }
-
-    .about-right p {
-        font-size: 14px;
-    }
-
-    .tab {
-        font-size: 12px;
-        padding: 6px 12px;
-    }
-    .about-education h2 {
-        font-size: 26px;
-    }
-
-    .about-education .education-desc {
-        font-size: 14px;
-        line-height: 1.5;
-        max-width: 90%;
-        margin-bottom: 30px;
-    }
-     .education-tiles {
-        grid-template-columns: 1fr; /* stack vertically */
-        gap: 15px;
-    }
-    .education-tile {
-        height: 200px;
-    }
-    .education-content h2 {
-        font-size: 18px;
-    }
-    .education-content h3 {
-        font-size: 14px;
-    }
-    .education-content span {
-        font-size: 12px;
-    }
-
-    .education-content h3 {
-        font-size: 16px;
-    }
-
-    .education-content span {
-        font-size: 14px;
-    }
-     .skill-category h2 {
-      font-size: 24px;
-    }
-
-    .skill-bar {
-      height: 18px;
-    }
-
-    .skill-bar-fill {
-      font-size: 13px;
-      line-height: 18px;
-    }
-
-    .skill .skill-name {
-      font-size: 14px;
-    }   
-     .tiles2 {
-        grid-template-columns: 1fr; /* stack tiles vertically */
-        gap: 15px;
-    }
-    .tile2 {
-        height: 180px;
-    }
-    .tile-content2 h3 {
-        font-size: 14px;
-    }
-    .tile-content2 span {
-        font-size: 11px;
-    }
-    #works p {
-        font-size: 14px;
-        padding: 0 10px;
-    }
-      .education-tile {
-        aspect-ratio: 1;           /* keep square for small phones */
-    }
-     #digital-design,
-    #film-works,
-    #pitik-yanyannieey {
-        padding: 50px 5%;
-    }
-
-    #digital-design h1,
-    #film-works h1,
-    #pitik-yanyannieey h1 {
-        font-size: 28px;
-    }
-
-    #digital-design p,
-    #film-works p,
-    #pitik-yanyannieey p {
-        font-size: 13px;
-    }
-
+/* ===== MOBILE RESPONSIVENESS ===== */
+@media (max-width: 768px) {
     .tiles,
     .tiles1,
-    .tiles2 {
-        grid-template-columns: 1fr;
+    .tiles2,
+    .education-tiles {
+        grid-template-columns: 1fr !important; /* stack vertically */
+        gap: 15px;
     }
 
     .tile,
     .tile1,
-    .tile2 {
-        height: 180px;
-        gap: 16px;
-        overflow: hidden;  /* hides anything overflowing the tile */
-        border-radius: 15px; /* keeps the rounded corners consistent */
+    .tile2,
+    .education-tile {
+        height: auto;      /* let content define height */
+        aspect-ratio: 1;   /* maintain square */
     }
 
-    #lightbox img {
-        max-width: 95%;
-        max-height: 80%;
-    }
-     .contact-wrapper {
-    flex-direction: column; /* stack image & form */
-    max-width: 90%;
-    }
-
-    .contact-image img {
-        height: 400px; /* reduce image height */
-    }
-
-    .contact-form {
-        padding: 30px;
-    }
-
-    .contact-form h2 {
-        font-size: 36px;
-    }
-
-    .contact-form p {
-        font-size: 15px;
-    }
-}
-
-/* SMALL PHONES */
-@media (max-width: 360px) {
-
-    .home-left h1 {
-        font-size: 32px;
-    }
-
-    .home-left h2 {
-        font-size: 20px;
-    }
-
-    .home-left .intro {
-        font-size: 15px;
-    }
-
-    .home-right img {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    .tiles {
-        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-        gap: 12px;
-    }
-
-    .tiles-title {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-
-    .tile {
-        height: 130px;
-    }
-
-    .tile-content h3 {
-        font-size: 14px;
-    }
+    .profile-section,
     .aboutme {
-        flex-direction: column;   /* image on top, info below */
+        flex-direction: column;
         align-items: center;
         gap: 20px;
     }
 
-    .profile-section {
+    .profile-img,
+    .home-right img,
+    .contact-image img {
         width: 100%;
-        justify-content: center;
-    }
-
-    .profile-img {
-        width: 100%;
-        aspect-ratio: 3 / 2;
-        border-radius: 14px;
+        height: auto;
     }
 
     .about-section {
@@ -1312,112 +1097,44 @@ body {
         text-align: center;
     }
 
-    .about-section h1 {
-        font-size: 20px;
-    }
-
-    .about-section p {
-        font-size: 13px;
-        line-height: 1.6;
-    }
-
-    .tabs {
-        justify-content: center;
-    }
-
     .tab {
-        font-size: 11px;
-        padding: 5px 10px;
+        font-size: 12px;
+        padding: 6px 10px;
     }
 
     .tab-content {
         padding: 12px;
     }
-     .about-education h2 {
-        font-size: 22px;
-    }
 
-    .about-education .education-desc {
-        font-size: 13px;
-        line-height: 1.4;
-        margin-bottom: 25px;
-    }
-    .education-tile {
-        height: 180px;
-    }
-    .education-content h2 {
-        font-size: 16px;
-    }
-    .education-content h3 {
-        font-size: 12px;
-    }
-    .education-content span {
-        font-size: 11px;
-    }
-
-    .education-content h3 {
-        font-size: 14px;
-    }
-
-    .education-content span {
-        font-size: 12px;
-    }
-     .skill-category h2 {
-      font-size: 22px;
-    }
-
-    .skill-bar {
-      height: 16px;
-    }
-
-    .skill-bar-fill {
-      font-size: 12px;
-      line-height: 16px;
-    }
-
-    .skill .skill-name {
-      font-size: 13px;
-    }
-      .tile2 {
-        height: 160px;
-    }
-    .tile-content2 h3 {
-        font-size: 13px;
-    }
-    .tile-content2 span {
-        font-size: 10px;
-    }
-     .education-tile {
-        aspect-ratio: 1;           /* keep tiles square on tiniest screens */
-    }
-     #digital-design h1,
+    .tiles-title,
+    #digital-design h1,
+    #works h1,
     #film-works h1,
     #pitik-yanyannieey h1 {
         font-size: 24px;
     }
 
+    .tiles-title,
     #digital-design p,
+    #works p,
     #film-works p,
     #pitik-yanyannieey p {
-        font-size: 12.5px;
-        line-height: 1.7;
+        font-size: 14px;
     }
+}
 
+/* ===== SMALL PHONES ===== */
+@media (max-width: 480px) {
     .tile,
     .tile1,
-    .tile2 {
+    .tile2,
+    .education-tile {
+        aspect-ratio: 1;
         height: 160px;
-        overflow: hidden;  /* hides anything overflowing the tile */
-        border-radius: 15px; /* keeps the rounded corners consistent */
     }
-  }
 
-
-/* VERY SMALL PHONES */
-@media (max-width: 320px) {
-
-    .logo img {
-        width: 50px;
+    .tiles-title {
+        font-size: 20px;
     }
 
     .home-left h1 {
@@ -1437,163 +1154,103 @@ body {
         padding: 6px 16px;
     }
 
-    .home-right img {
-        width: 100%;
-        max-width: 320px;
-    }
-
-    .tiles {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 10px;
-    }
-
-    .tiles-title {
-        font-size: 18px;
-        margin-bottom: 15px;
-    }
-
-    .tile {
-        height: 120px;
-    }
-
-    .tile-content h3 {
-        font-size: 13px;
-    }
-
-    .aboutme {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .profile-section {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .profile-img {
-        width: 100%;
-        aspect-ratio: 16 / 9;   /* wider look */
-        border-radius: 12px;
-        border-width: 3px;
-    }
-
-    .about-section {
-        width: 100%;
-        padding: 12px;
-        text-align: center;
-    }
-
-    .about-section h1 {
-        font-size: 18px;
-    }
-
-    .about-section p {
-        font-size: 12px;
-        line-height: 1.5;
-    }
-
-    .tabs {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .tab {
-        font-size: 10px;
-        padding: 5px 8px;
-    }
-
-    .tab-content {
-        padding: 10px;
-    }
-    .about-education h2 {
-        font-size: 20px;
-    }
-
-    .about-education .education-desc {
-        font-size: 12px;
-        line-height: 1.3;
-        margin-bottom: 20px;
-        padding: 0 10px;
-    }
-     .education-tile {
-        height: 160px;
-        border-radius: 16px;
-    }
-    .education-content h2 {
-        font-size: 14px;
-    }
-    .education-content h3 {
-        font-size: 11px;
-    }
-    .education-content span {
-        font-size: 10px;
-    }
-
-    .education-content h3 {
-        font-size: 12px; /* smaller text */
-    }
-
-    .education-content span {
-        font-size: 10px; /* smaller text */
-    }
-      .skill-category h2 {
-      font-size: 20px;
-    }
-
-    .skill-bar {
-      height: 14px;
-    }
-
+    .skill-bar,
     .skill-bar-fill {
-      font-size: 11px;
-      line-height: 14px;
+        height: 14px;
+        font-size: 11px;
+        line-height: 14px;
     }
 
-    .skill .skill-name {
-      font-size: 12px;
-    }
-    .tile2 {
-        height: 140px;
-    }
-    .tile-content2 h3 {
+    .tile-content h3,
+    .tile-content1 h3,
+    .tile-content2 h3,
+    .education-content h3 {
         font-size: 12px;
     }
-    .tile-content2 span {
-        font-size: 9px;
-    }
-      .education-tile {
-        aspect-ratio: 1;           /* ensures tiny devices still show image properly */
-    }
-    
-    #digital-design,
-    #film-works,
-    #pitik-yanyannieey {
-        padding: 40px 4%;
+
+    .tile-content2 span,
+    .education-content span {
+        font-size: 10px;
     }
 
+    #lightbox img {
+        max-width: 95%;
+        max-height: 80%;
+    }
+}
+
+/* ===== VERY SMALL PHONES ===== */
+@media (max-width: 360px) {
+    .tile,
+    .tile1,
+    .tile2,
+    .education-tile {
+        height: 140px;
+        aspect-ratio: 1;
+    }
+
+    .tiles-title,
     #digital-design h1,
+    #works h1,
     #film-works h1,
     #pitik-yanyannieey h1 {
         font-size: 22px;
     }
 
-    #digital-design p,
-    #film-works p,
-    #pitik-yanyannieey p {
-        font-size: 12px;
-    }
-    .tile,
-    .tile1,
-    .tile2 {
-        height: 140px;
-        overflow: hidden;  /* hides anything overflowing the tile */
-        border-radius: 15px; /* keeps the rounded corners consistent */
+    .tile-content h3,
+    .tile-content1 h3,
+    .tile-content2 h3,
+    .education-content h3 {
+        font-size: 11px;
     }
 
-    #lightbox .close-btn {
-        font-size: 28px;
-        top: 15px;
-        right: 20px;
+    .tile-content2 span,
+    .education-content span {
+        font-size: 9px;
+    }
+
+    .skill-bar,
+    .skill-bar-fill {
+        height: 12px;
+        font-size: 10px;
     }
 }
+
+/* ===== VERY SMALL PHONES (320px) ===== */
+@media (max-width: 320px) {
+    .tile,
+    .tile1,
+    .tile2,
+    .education-tile {
+        height: 120px;
+        aspect-ratio: 1;
+    }
+
+    .tiles-title {
+        font-size: 18px;
+    }
+
+    .home-left h1 {
+        font-size: 24px;
+    }
+
+    .home-left h2 {
+        font-size: 16px;
+    }
+
+    .home-left .intro {
+        font-size: 12px;
+    }
+
+    .tile-content h3,
+    .tile-content1 h3,
+    .tile-content2 h3 {
+        font-size: 10px;
+    }
+
+    .tile-content2 span,
+    .education-content span {
+        font-size: 8px;
+    }
+}
+
