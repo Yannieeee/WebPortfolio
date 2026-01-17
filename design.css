@@ -1049,121 +1049,160 @@ body {
   font-size: 14px;
   color: #562727;
 }
+/* ===================== SMALL MOBILE (<320px) ===================== */
+@media (max-width: 319px) {
 
-/* ----- Mobile Small Portrait (320px–480px) ----- */
-@media (max-width: 480px) {
-    .logo img { width: 50px; }
+    /* Navbar */
+    .logo img { width: 55px; }
+    .nav-link { font-size: 13px; padding: 4px 6px; }
+
+    /* Home */
     .home-left h1 { font-size: 28px; }
     .home-left h2 { font-size: 18px; }
     .home-left .intro { font-size: 14px; }
-    .home-buttons .btn { font-size: 13px; padding: 6px 16px; }
+    .home-buttons .btn { font-size: 12px; padding: 5px 12px; }
+    .home-right img { max-width: 280px; }
 
-    .home-right img { width: 100%; max-width: 320px; }
-    .tiles, .tiles1, .tiles2, .education-tiles { grid-template-columns: 1fr; gap: 10px; }
-
-    .tile, .tile1, .tile2, .education-tile { height: 140px; aspect-ratio: 1; overflow: hidden; }
+    /* Tiles */
+    .tiles, .tiles1, .tiles2, .education-tiles { grid-template-columns: 1fr; gap: 12px; }
+    .tile, .tile1, .tile2, .education-tile { height: 140px; border-radius: 12px; }
     .tile-content h3, .tile-content1 h3, .tile-content2 h3, .education-content h3 { font-size: 12px; }
-    .tile-content2 span, .education-content span { font-size: 10px; }
+    .tile-content span, .tile-content2 span, .education-content span { font-size: 10px; }
 
-    .aboutme { flex-direction: column; align-items: center; gap: 15px; }
+    /* About Me */
+    .aboutme { flex-direction: column; gap: 15px; }
     .profile-img { width: 100%; aspect-ratio: 16/9; border-radius: 12px; }
-    .about-section { width: 100%; padding: 12px; text-align: center; }
+    .about-section { padding: 12px; }
     .about-section h1 { font-size: 18px; }
-    .about-section p { font-size: 12px; line-height: 1.5; }
-    .tab { font-size: 10px; padding: 5px 8px; }
-    .tab-content { padding: 10px; }
+    .about-section p { font-size: 12px; line-height: 1.4; }
 
-    .about-education h2 { font-size: 20px; }
-    .about-education .education-desc { font-size: 12px; line-height: 1.3; margin-bottom: 20px; padding: 0 10px; }
+    /* Tabs */
+    .tab { font-size: 10px; padding: 4px 8px; }
 
+    /* Skills */
     .skill-category h2 { font-size: 20px; }
     .skill-bar { height: 14px; }
     .skill-bar-fill { font-size: 11px; line-height: 14px; }
     .skill .skill-name { font-size: 12px; }
 
-    #digital-design, #film-works, #pitik-yanyannieey { padding: 40px 4%; }
-    #digital-design h1, #film-works h1, #pitik-yanyannieey h1 { font-size: 22px; }
-    #digital-design p, #film-works p, #pitik-yanyannieey p { font-size: 12px; }
-
+    /* Contact */
     .contact-wrapper { flex-direction: column; max-width: 90%; }
     .contact-image img { height: 300px; }
     .contact-form { padding: 20px; }
     .contact-form h2 { font-size: 28px; }
     .contact-form p { font-size: 12px; }
+
+    /* Section headings */
+    #digital-design h1, #film-works h1, #pitik-yanyannieey h1 { font-size: 22px; }
+    #digital-design p, #film-works p, #pitik-yanyannieey p { font-size: 12px; }
+
+    /* Lightbox */
+    #lightbox img { max-width: 90%; max-height: 80%; }
+    #lightbox .close-btn { font-size: 28px; top: 15px; right: 20px; }
 }
 
-/* ----- Mobile Large / Landscape (481px–767px) ----- */
-@media (min-width: 481px) and (max-width: 767px) {
-    .logo img { width: 60px; }
+
+/* ===================== MOBILE PORTRAIT (320px - 480px) ===================== */
+@media (min-width: 320px) and (max-width: 480px) {
+
+    /* Navbar */
+    .logo img { width: 65px; }
+    .nav-link { font-size: 15px; padding: 6px 10px; }
+
+    /* Home */
     .home-left h1 { font-size: 36px; }
     .home-left h2 { font-size: 24px; }
     .home-left .intro { font-size: 16px; }
-    .home-buttons .btn { font-size: 14px; padding: 8px 18px; }
+    .home-buttons .btn { font-size: 14px; padding: 7px 18px; }
+    .home-right img { max-width: 400px; }
 
-    .home-right img { width: 100%; max-width: 400px; }
-    .tiles, .tiles1, .tiles2, .education-tiles { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
-    .tile, .tile1, .tile2, .education-tile { height: 180px; aspect-ratio: 1; }
-
+    /* Tiles */
+    .tiles, .tiles1, .tiles2, .education-tiles { grid-template-columns: 1fr; gap: 15px; }
+    .tile, .tile1, .tile2, .education-tile { height: 180px; border-radius: 15px; }
     .tile-content h3, .tile-content1 h3, .tile-content2 h3, .education-content h3 { font-size: 14px; }
-    .tile-content2 span, .education-content span { font-size: 11px; }
+    .tile-content span, .tile-content2 span, .education-content span { font-size: 12px; }
 
+    /* About Me */
     .aboutme { flex-direction: column; gap: 20px; }
-    .profile-img { width: 100%; aspect-ratio: 4/3; }
-    .about-section { padding: 15px; }
-    .about-section h1 { font-size: 20px; }
-    .about-section p { font-size: 13px; line-height: 1.6; }
-
-    .tab { font-size: 11px; padding: 5px 10px; }
-    .tab-content { padding: 12px; }
-
-    .about-education h2 { font-size: 22px; }
-    .about-education .education-desc { font-size: 13px; line-height: 1.4; }
-
-    .skill-category h2 { font-size: 22px; }
-    .skill-bar { height: 16px; }
-    .skill-bar-fill { font-size: 12px; line-height: 16px; }
-    .skill .skill-name { font-size: 13px; }
-
-    #digital-design, #film-works, #pitik-yanyannieey { padding: 50px 5%; }
-    #digital-design h1, #film-works h1, #pitik-yanyannieey h1 { font-size: 28px; }
-    #digital-design p, #film-works p, #pitik-yanyannieey p { font-size: 13px; }
-
-    .contact-image img { height: 350px; }
-    .contact-form { padding: 25px; }
-    .contact-form h2 { font-size: 32px; }
-    .contact-form p { font-size: 14px; }
-}
-
-/* ----- Tablet Portrait (768px–1024px) ----- */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .home-left h1 { font-size: 42px; }
-    .home-left h2 { font-size: 28px; }
-    .home-left .intro { font-size: 18px; }
-
-    .tiles, .tiles1, .tiles2, .education-tiles { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-    .tile, .tile1, .tile2, .education-tile { height: 220px; aspect-ratio: 1; }
-
-    .profile-img { aspect-ratio: 4/3; width: 100%; }
+    .profile-img { width: 100%; aspect-ratio: 4/3; border-radius: 15px; }
+    .about-section { padding: 20px; }
     .about-section h1 { font-size: 24px; }
-    .about-section p { font-size: 14px; line-height: 1.8; }
+    .about-section p { font-size: 14px; line-height: 1.5; }
+
+    /* Tabs */
+    .tab { font-size: 12px; padding: 6px 12px; }
+
+    /* Skills */
+    .skill-category h2 { font-size: 24px; }
+    .skill-bar { height: 18px; }
+    .skill-bar-fill { font-size: 13px; line-height: 18px; }
+    .skill .skill-name { font-size: 14px; }
+
+    /* Contact */
+    .contact-wrapper { flex-direction: column; max-width: 90%; }
+    .contact-image img { height: 400px; }
+    .contact-form { padding: 30px; }
+    .contact-form h2 { font-size: 36px; }
+    .contact-form p { font-size: 14px; }
+
+    /* Section headings */
+    #digital-design h1, #film-works h1, #pitik-yanyannieey h1 { font-size: 28px; }
+    #digital-design p, #film-works p, #pitik-yanyannieey p { font-size: 13.5px; }
+
+    /* Lightbox */
+    #lightbox img { max-width: 95%; max-height: 85%; }
+    #lightbox .close-btn { font-size: 32px; top: 20px; right: 25px; }
 }
 
-/* ----- Laptop / Small Desktop (1025px–1200px) ----- */
-@media (min-width: 1025px) and (max-width: 1200px) {
-    .home-left h1 { font-size: 48px; }
-    .home-left h2 { font-size: 32px; }
-    .home-left .intro { font-size: 16px; }
 
-    .tiles, .tiles1, .tiles2, .education-tiles { gap: 25px; }
-    .tile, .tile1, .tile2, .education-tile { height: 250px; }
-}
+/* ===================== MOBILE LANDSCAPE / TABLETS (481px - 768px) ===================== */
+@media (min-width: 481px) and (max-width: 768px) {
 
-/* ----- Desktop / Large Monitor (1201px+) ----- */
-@media (min-width: 1201px) {
-    .home-left h1 { font-size: 50px; }
-    .home-left h2 { font-size: 34px; }
-    .home-left .intro { font-size: 16px; }
+    /* Navbar */
+    .logo img { width: 80px; }
+    .nav-link { font-size: 16px; padding: 6px 12px; }
 
-    .tiles, .tiles1, .tiles2, .education-tiles { gap: 30px; }
-    .tile, .tile1, .tile2, .education-tile { height: 280px; }
+    /* Home */
+    .home-left h1 { font-size: 44px; }
+    .home-left h2 { font-size: 28px; }
+    .home-left .intro { font-size: 17px; }
+    .home-buttons .btn { font-size: 16px; padding: 10px 22px; }
+    .home-right img { max-width: 500px; }
+
+    /* Tiles */
+    .tiles, .tiles1, .tiles2, .education-tiles { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .tile, .tile1, .tile2, .education-tile { height: 220px; border-radius: 15px; }
+    .tile-content h3, .tile-content1 h3, .tile-content2 h3, .education-content h3 { font-size: 16px; }
+    .tile-content span, .tile-content2 span, .education-content span { font-size: 14px; }
+
+    /* About Me */
+    .aboutme { flex-direction: row; gap: 25px; }
+    .profile-img { width: 100%; aspect-ratio: 4/3; border-radius: 16px; }
+    .about-section { padding: 25px; }
+    .about-section h1 { font-size: 28px; }
+    .about-section p { font-size: 16px; line-height: 1.6; }
+
+    /* Tabs */
+    .tab { font-size: 13px; padding: 7px 14px; }
+
+    /* Skills */
+    .skill-category h2 { font-size: 26px; }
+    .skill-bar { height: 20px; }
+    .skill-bar-fill { font-size: 14px; line-height: 20px; }
+    .skill .skill-name { font-size: 15px; }
+
+    /* Contact */
+    .contact-wrapper { flex-direction: row; gap: 20px; max-width: 100%; }
+    .contact-image img { height: 450px; }
+    .contact-form { padding: 35px; }
+    .contact-form h2 { font-size: 38px; }
+    .contact-form p { font-size: 16px; }
+
+    /* Section headings */
+    #digital-design h1, #film-works h1, #pitik-yanyannieey h1 { font-size: 32px; }
+    #digital-design p, #film-works p, #pitik-yanyannieey p { font-size: 14px; line-height: 1.6; }
+
+    /* Lightbox */
+    #lightbox img { max-width: 95%; max-height: 85%; }
+    #lightbox .close-btn { font-size: 36px; top: 25px; right: 30px; }
 }
