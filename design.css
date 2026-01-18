@@ -376,7 +376,7 @@ body {
 .about-education .education-desc {
     font-size: 15px;
     line-height: 1.8;
-    margin: 0 auto 40px;
+    margin: 0 auto 30px;
     max-width: 900px;
     text-align: center;
     color: #fff;
@@ -487,6 +487,28 @@ body {
     min-width: 300px;
     padding: 20px;
     border-radius: 15px;
+}
+.skills-title {
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #562727;
+}
+.skill-category h2 {
+    font-size: 26px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #fff;
+}
+/* Skills section description (same as Works / Education) */
+.skills-desc {
+    max-width: 700px;
+    margin: -20px auto 45px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 /* Technical Skills */
@@ -602,7 +624,7 @@ body {
     display: grid;
     gap: 30px;
     padding-bottom: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     margin-top: 30px;
 }
 
@@ -658,7 +680,7 @@ body {
 #digital-design p {
     max-width: 900px;
     margin: 0 auto 30px;
-    line-height: 1.8;
+    line-height: 1.0;
     color: #fff;
 }
 
@@ -713,9 +735,9 @@ body {
 }
 
 #film-works p {
-    max-width: 1000px;
+    max-width: 1300px;
     margin: 0 auto 30px;
-    line-height: 1.8;
+    line-height: 1.;
     color: #fff;
 }
 
@@ -727,7 +749,7 @@ body {
 }
 
 #film-works .tile2 {
-    height: 900px;
+    height: 700px;
     border-radius: 15px;
     background-size: cover;
     background-position: center;
@@ -789,6 +811,7 @@ body {
     height: 220px;
     border-radius: 15px;
     background-size: cover;
+    object-fit: contain;
     background-position: center;
     position: relative;
     overflow: hidden;
@@ -1175,6 +1198,7 @@ body {
     }
 }
 
+
 /* PHONES (≤ 480px) */
 @media (max-width: 480px) {
 
@@ -1259,14 +1283,12 @@ body {
         max-width: 90%;
         margin-bottom: 30px;
     }
-    .education-tiles {
-        grid-template-columns: 1fr; /* optional: single column */
-        gap: 12px;
+     .education-tiles {
+        grid-template-columns: 1fr; /* stack vertically */
+        gap: 15px;
     }
-
     .education-tile {
-        height: 180px;
-    }
+        height: 200px;
     }
     .education-content h2 {
         font-size: 18px;
@@ -1291,6 +1313,9 @@ body {
 
     .skill-bar {
       height: 18px;
+    }
+    .skill-category h2 {
+        font-size: 20px;
     }
 
     .skill-bar-fill {
@@ -1378,7 +1403,7 @@ body {
     .contact-form p {
         font-size: 15px;
     }
-
+}
 
 /* SMALL PHONES */
 @media (max-width: 360px) {
@@ -1500,6 +1525,9 @@ body {
 
     .skill-bar {
       height: 18px;
+    }
+    .skills-section > h2 {
+        font-size: 24px;
     }
 
     .skill-bar-fill {
@@ -1633,5 +1661,214 @@ body {
         justify-content: center;
         gap: 10px;
     }
+}
+/* ===== TABLET (≤ 768px) ===== */
+@media (max-width: 768px) {
+
+  .contact-wrapper {
+    flex-direction: column;   /* stack image + form */
+    align-items: center;      /* center children horizontally */
+  }
+
+  .contact-image,
+  .contact-form {
+    flex: none;               /* prevent flex from stretching width */
+    width: 100%;              /* form takes full width */
+    max-width: 600px;         /* optional: limit width for image and form */
+    box-sizing: border-box;
+  }
+
+  .contact-image {
+    display: flex;
+    justify-content: center;  /* center image horizontally */
+    padding-top: 3px;         /* small top padding */
+  }
+
+  .contact-image img {
+    width: auto;              /* keep natural width */
+    max-width: 100%;          /* scale down if needed */
+    height: auto;             /* maintain aspect ratio */
+    max-height: 450px;        /* limit height */
+    display: block;
+  }
+
+  .contact-form {
+    padding: 30px;
+  }
+}
+
+/* ===== MOBILE (≤ 480px) ===== */
+@media (max-width: 480px) {
+
+  .contact-image {
+    padding-top: 3px;         /* keep top padding */
+  }
+
+  .contact-image img {
+    max-height: 360px;
+  }
+
+  .contact-form {
+    padding: 25px 15px;
+  }
+}
+
+/* ===== SMALL MOBILE (≤ 360px) ===== */
+@media (max-width: 360px) {
+
+  .contact-image {
+    padding-top: 3px;
+  }
+
+  .contact-image img {
+    max-height: 300px;
+  }
+
+  .contact-form {
+    padding: 20px 12px;
+  }
+}
+
+/* ===== EXTRA SMALL (≤ 320px) ===== */
+@media (max-width: 320px) {
+
+  .contact-image {
+    padding-top: 3px;
+  }
+
+  .contact-image img {
+    max-height: 260px;
+  }
+
+  .contact-form {
+    padding: 15px 10px;
+  }
+}
+
+/* ===== TABLET (≤ 768px) ===== */
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 35px 4%;
+  }
+
+  .footer-content {
+    flex-direction: column;   /* stack nav + social icons */
+    gap: 25px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-nav h2 {
+    font-size: 16px;
+  }
+
+  .footer-nav a,
+  .footer-nav p {
+    font-size: 14px;
+  }
+
+  .footer-social-icons {
+    gap: 12px;
+  }
+
+  .footer-social-icons a img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .footer .copyright {
+    font-size: 13px;
+  }
+}
+
+/* ===== MOBILE (≤ 480px) ===== */
+@media (max-width: 480px) {
+
+  .footer {
+    padding: 30px 3%;
+  }
+
+  .footer-nav h2 {
+    font-size: 15px;
+  }
+
+  .footer-nav a,
+  .footer-nav p {
+    font-size: 13px;
+  }
+
+  .footer-social-icons {
+    gap: 10px;
+  }
+
+  .footer-social-icons a img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer .copyright {
+    font-size: 12px;
+  }
+}
+
+/* ===== SMALL MOBILE (≤ 360px) ===== */
+@media (max-width: 360px) {
+
+  .footer {
+    padding: 25px 2.5%;
+  }
+
+  .footer-nav h2 {
+    font-size: 14px;
+  }
+
+  .footer-nav a,
+  .footer-nav p {
+    font-size: 12px;
+  }
+
+  .footer-social-icons {
+    gap: 8px;
+  }
+
+  .footer-social-icons a img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .footer .copyright {
+    font-size: 11px;
+  }
+}
+
+/* ===== EXTRA SMALL (≤ 320px) ===== */
+@media (max-width: 320px) {
+
+  .footer {
+    padding: 20px 2%;
+  }
+
+  .footer-nav h2 {
+    font-size: 13px;
+  }
+
+  .footer-nav a,
+  .footer-nav p {
+    font-size: 11px;
+  }
+
+  .footer-social-icons {
+    gap: 6px;
+  }
+
+  .footer-social-icons a img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer .copyright {
+    font-size: 10px;
+  }
 }
 
