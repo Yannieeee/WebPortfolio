@@ -9,6 +9,7 @@
 </head>
 <body>
     
+    <!-- NAVBAR -->
     <nav class="navbar">
         <a href="#" class="logo"><img src="img/logo2.png" alt=""></a>
         <ul class="nav-links">
@@ -17,313 +18,135 @@
             <li><a class="nav-link" href="#works">Works</a></li>
             <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
-
-        <!-- Hamburger Button -->
         <div class="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        
     </nav>
 
-    <!-- HOME SECTION -->
-    <section id="home" class="home">
-        <div class="home-left">
-            <h2>Hello, I am</h2>
-            <h1>Juliana Rose</h1>
-            <p class="intro">
-                I am a dedicated and passionate Information Technology student, committed to developing innovative solutions and continuously enhancing my skills to contribute effectively in the tech industry.
-            </p>
-            <div class="home-buttons">
-                <a href="Juliana_CV.pdf" class="btn" target="_blank">Download CV</a>
-            </div>
+   <!-- HOME SECTION -->
+<section id="home" class="home">
+    <div class="home-left">
+        <h2>Hello, I am</h2>
+        <h1>Juliana Rose</h1>
+        <p class="intro">
+            I am a dedicated and passionate Information Technology student, committed to developing innovative solutions and continuously enhancing my skills to contribute effectively in the tech industry.
+        </p>
+        <div class="home-buttons">
+            <a href="CURRICULUM-VITAE.pdf" class="btn" target="_blank">Download CV</a>
         </div>
+    </div>
+    <div class="home-right">
+        <img src="img/bg1.png" alt="Home Image">
+    </div>
+</section>
 
-        <div class="home-right">
-            <img src="img/bg1.png" alt="Home Image">
-        </div>
-    </section>
-    
     <!-- CONTENT SECTION -->
     <section id="content">
         <h1 class="tiles-title">Discover Me!</h1>
         <div class="tiles">
-            <div class="tile" style="background-image: url('img/DiscoverMe1.png');" onclick="location.href='#about'">
-                <div class="tile-content">
-                </div>
-            </div>
-            <div class="tile" style="background-image: url('img/DiscoverMe3.png');" onclick="location.href='#works'">
-                <div class="tile-content">
-                </div>
-            </div>
-            <div class="tile" style="background-image: url('img/DiscoverMe4.png');" onclick="location.href='#contact'">
-                <div class="tile-content">
-                </div>
-            </div>
+            <div class="tile" style="background-image: url('img/DiscoverMe1.png');" onclick="location.href='#about'"></div>
+            <div class="tile" style="background-image: url('img/DiscoverMe3.png');" onclick="location.href='#works'"></div>
+            <div class="tile" style="background-image: url('img/DiscoverMe4.png');" onclick="location.href='#contact'"></div>
         </div>
     </section>
 
-     <!-- ABOUT SECTION -->
-        <section id="about">
-
-            <!-- TOP: ABOUT CONTENT -->
-            <div class="aboutme">
-                <!-- Left -->
-                <div class="profile-section">
-                    <img id="about-img" src="img/pic1.jpg" alt="Yannieee" class="profile-img">
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="aboutme">
+            <div class="profile-section">
+                <img id="about-img" src="img/pic1.jpg" alt="Yannieee" class="profile-img">
+            </div>
+            <div class="about-section">
+                <h1>About Me</h1>
+                <p>Hello! I'm Yannieee! Currently a Junior studying Bachelor of Science in Information Technology at Cavite State University - Silang Campus.</p>
+                <div class="tabs">
+                    <div class="tab active" onclick="showTab('basic-info')">Basic Info</div>
+                    <div class="tab" onclick="showTab('hobbies')">Hobbies</div>
+                    <div class="tab" onclick="showTab('favorites')">Favorites</div>
                 </div>
-
-                <!-- Right -->
-                <div class="about-section">
-                    <h1>About Me</h1>
-                    <p>
-                        Hello! I'm Yannieee! Currently a Junior studying Bachelor of Science
-                        in Information Technology at Cavite State University - Silang Campus.
-                    </p>
-                    <div class="tabs">
-                        <div class="tab active" onclick="showTab('basic-info')">Basic Info</div>
-                        <div class="tab" onclick="showTab('hobbies')">Hobbies</div>
-                        <div class="tab" onclick="showTab('favorites')">Favorites</div>
-                    </div>
 
                 <!-- TAB CONTENTS -->
-                    <div id="basic-info" class="tab-content active">
-                        <p><span class="basic">Full Name:</span> Juliana Rose S. Maloloy-on</p>
-                        <p><span class="basic">Nickname:</span> Juls, Yanyan & Yannieee</p>
-                        <p><span class="basic">Birthdate:</span> June 2004</p>
-                        <p><span class="basic">Religion:</span> Roman Catholic</p>
-                        <p><span class="basic">Nationality:</span> Filipino</p>
-                    </div>
+                <div id="basic-info" class="tab-content active">
+                    <p><span class="basic">Full Name:</span> Juliana Rose S. Maloloy-on</p>
+                    <p><span class="basic">Nickname:</span> Juls, Yanyan & Yannieee</p>
+                    <p><span class="basic">Birthdate:</span> June 10, 2004</p>
+                    <p><span class="basic">Age:</span> 21</p>
+                    <p><span class="basic">Gender:</span> Female</p>
+                    <p><span class="basic">Nationality:</span> Filipino</p>
+                    <p><span class="basic">Place of Birth:</span> Dasmariñas, Cavite</p>
+                    <p><span class="basic">Religion:</span> Roman Catholic</p>
+                    <p><span class="basic">Languages Spoken:</span> Filipino, English</p>
+                </div>
 
-                    <div id="education" class="tab-content">
-                        <p><span class="basic">Primary:</span> Dasmarinas II Central School</p>
-                        <p><span class="basic">Secondary:</span> Dasmarinas Integrated High School</p>
-                        <p><span class="basic">Senior High:</span> Emilio Aguinaldo College - Cavite Campus</p>
-                        <p><span class="basic">College:</span> Cavite State University - Silang Campus</p>
-                    </div>
+                <div id="hobbies" class="tab-content">
+                    <p><span class="basic">Hobbies:</span><br>
+                        Dancing<br>
+                        Reading (Novel, Manhwa, Manga, etc)<br>
+                        Playing Games (COD, Genshin, ML)<br>
+                        Taking Pictures or Videos<br>
+                        Watching Series & Movies<br>
+                        Dressing up<br>
+                        Doing makeup
+                    </p>
+                </div>
 
-                    <div id="hobbies" class="tab-content">
-                        <p><span class="basic">Hobbies:</span> Dancing, Gaming, Reading, Writing</p>
-                    </div>
-
-                    <div id="favorites" class="tab-content">
-                        <p><span class="Fav">Favorite Food:</span> Chicken, Pork, Spicy Foods</p>
-                        <p><span class="Fav">Favorite Color:</span> Red, Pink, Black</p>
-                    </div>
+                <div id="favorites" class="tab-content">
+                    <p><span class="Fav">Food:</span> Kare-kare, Laing, Chicken</p>
+                    <p><span class="Fav">Drinks:</span> Frappuccino (Any drink with coffee shot)</p>
+                    <p><span class="Fav">Color:</span> Red, Pink, Black</p>
+                    <p><span class="Fav">Movie:</span> Gangubai Kathiawadi</p>
+                    <p><span class="Fav">Dramas:</span> Thai, Chinese, Korean Drama</p>
+                    <p><span class="Fav">Music Genre:</span> Pop, Hiphop, Contemporary, & Dance Hall</p>
+                    <p><span class="Fav">Song:</span> Mr. Loverman by Ricky Montgomery</p>
+                    <p><span class="Fav">Movie Genre:</span> Horror, Thriller, Supernatural, Fantasy</p>
+                    <p><span class="Fav">Actor / Actress:</span> Barbie Forteza</p>
+                    <p><span class="Fav">Place / Travel Destination:</span> Thailand</p>
                 </div>
             </div>
+        </div>
 
-            <!-- BOTTOM: EDUCATION -->
-            <div class="about-education">
-                <h2>Educational Attainment</h2>
-
-                <p class="education-desc">
-                    My academic journey began at Dasmarinas II Central School and continued through
-                    Dasmarinas Integrated High School and Emilio Aguinaldo College – Cavite Campus.
-                    I am currently pursuing my degree at Cavite State University – Silang Campus.
-                </p>
-                <div class="education-tiles">
-
-                        <a href="https://www.facebook.com/DepEdTayoDIICS107917" class="education-link">
-                            <div class="education-tile" style="background-image: url('img/elem.jpg');">
-                                <div class="education-content">
-                                    <h2>Primary School</h2>
-                                    <h3>Dasmariñas II Central School</h3>
-                                    <span>2010 - 2016</span>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://www.facebook.com/profile.php?id=61572516748053" class="education-link">
-                            <div class="education-tile" style="background-image: url('img/hs.jpg');">
-                                <div class="education-content">
-                                    <h2>Secondary School</h2>
-                                    <h3>Dasmariñas Integrated High School</h3>
-                                    <span>2016 - 2020</span>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://www.facebook.com/eac.edu.ph" class="education-link">
-                            <div class="education-tile" style="background-image: url('img/shs.jpg');">
-                                <div class="education-content">
-                                    <h2>Senior High School</h2>
-                                    <h3>Emilio Aguinaldo College - Cavte Campus</h3>
-                                    <span>2020 - 2022</span>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://www.facebook.com/CaviteStateUniversitySilangCampus" class="education-link">
-                            <div class="education-tile" style="background-image: url('img/col.jpg');">
-                                <div class="education-content">
-                                    <h2>Bachelor’s Degree</h2>
-                                    <h3>Cavite State University - Silang Campus</h3>
-                                    <span>2022 - Present</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-
-      <!-- SKILLS SECTION -->
-        <section id="skills" class="skills-section">
-            <h2 class="skills-title">Skills</h2>
-            <!-- Technical Skills -->
-            <div class="skill-category technical">
-                <h2>Technical Skills</h2>
-                <p class="skill-description">
-                    These are the core technical abilities I have developed through projects and coursework. 
-                    I specialize in web development and UI/UX design.
-                </p>
-
-                <div class="skill">
-                    <div class="skill-name">
-                        <span>HTML</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-fill tech-fill" style="width: 90%"></div>
-                    </div>
-                    <p class="skill-note">Strong foundation in structuring web pages.</p>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-name">
-                        <span>CSS</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-fill tech-fill" style="width: 80%"></div>
-                    </div>
-                    <p class="skill-note">Skilled in styling responsive and modern layouts.</p>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-name">
-                        <span>UI/UX Design</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-fill tech-fill" style="width: 85%"></div>
-                    </div>
-                    <p class="skill-note">Designing intuitive user interfaces with great experience.</p>
-                </div>
-            </div>
-
-            <!-- Soft Skills -->
-            <div class="skill-category soft">
-                <h2>Soft Skills</h2>
-                <p class="skill-description">
-                    I value communication and collaboration, which help me work effectively in team settings.
-                    These soft skills complement my technical expertise.
-                </p>
-
-                <div class="skill">
-                    <div class="skill-name">
-                        <span>Communication</span>
-                        <span>95%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-fill soft-fill" style="width: 95%"></div>
-                    </div>
-                    <p class="skill-note">Clear and effective in both written and verbal communication.</p>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-name">
-                        <span>Teamwork</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-fill soft-fill" style="width: 90%"></div>
-                    </div>
-                    <p class="skill-note">Collaborates well and contributes positively to team goals.</p>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-name">
-                        <span>Time Management</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-fill soft-fill" style="width: 85%"></div>
-                    </div>
-                    <p class="skill-note">Efficiently prioritizes tasks to meet deadlines.</p>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-name">
-                        <span>Creativity</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-fill soft-fill" style="width: 80%"></div>
-                    </div>
-                    <p class="skill-note">Brings innovative ideas and solutions to projects.</p>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-name">
-                        <span>Problem Solving</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-fill soft-fill" style="width: 85%"></div>
-                    </div>
-                    <p class="skill-note">Able to analyze issues and implement effective solutions.</p>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- WORKS -->
-        <section id="works">
-                <h1 class="tiles-title2">Works</h1>
-                <p>
-                    These are some of the applications and systems I developed throughout my academic journey.
-                    Each project allowed me to apply my technical knowledge while solving real-world problems
-                    through design, development, and collaboration.
-                </p>
-
-                <div class="tiles2">
-                <a href="https://drive.google.com/drive/folders/15er0vrfBZm7zTpiln4YwGrBkgeYcXIxL?usp=sharing" class="education-link">
-                    <div class="tile2" style="background-image: url('img/Works/demon-slayer.png');">
-                        <div class="tile-content2">
-                            <h3>Demon Slayer Redeem Nezuko Chan</h3>
-                            <span>A Demon slayer inspired game develop using GDevelop</span>
+        <!-- EDUCATION -->
+        <div class="about-education">
+            <h2>Educational Attainment</h2>
+            <p class="education-desc">
+                My academic journey began at Dasmarinas II Central School and continued through Dasmarinas Integrated High School and Emilio Aguinaldo College – Cavite Campus. I am currently pursuing my degree at Cavite State University – Silang Campus.
+            </p>
+            <div class="education-tiles">
+                <a href="https://www.facebook.com/DepEdTayoDIICS107917" class="education-link">
+                    <div class="education-tile" style="background-image: url('img/elem.jpg');">
+                        <div class="education-content">
+                            <h2>Primary School</h2>
+                            <h3>Dasmariñas II Central School</h3>
+                            <span>2010 - 2016</span>
                         </div>
                     </div>
                 </a>
-
-                <a href="https://drive.google.com/drive/folders/1poaoD6Me_Ob5YMZSP8Qa8NEqcyQtFWvb?usp=drive_link" class="education-link">
-                    <div class="tile2" style="background-image: url('img/Works/sit&zip.png');">
-                        <div class="tile-content2">
-                            <h3>SIT & ZIP</h3>
-                            <span>Sales Management & Reservation App</span>
+                <a href="https://www.facebook.com/profile.php?id=61572516748053" class="education-link">
+                    <div class="education-tile" style="background-image: url('img/hs.jpg');">
+                        <div class="education-content">
+                            <h2>Secondary School</h2>
+                            <h3>Dasmariñas Integrated High School</h3>
+                            <span>2016 - 2020</span>
                         </div>
                     </div>
                 </a>
-
-                <a href="https://drive.google.com/drive/folders/1UxKsvsP6wdxD9-K_pDnse6QF9NNwAuZa?usp=sharing" class="education-link">
-                    <div class="tile2" style="background-image: url('img/Works/lesserafim.png');">
-                        <div class="tile-content2">
-                            <h3>LESSERAFIM DISCOGRAPHY</h3>
-                            <span>K-Pop Group Discography Website</span>
+                <a href="https://www.facebook.com/eac.edu.ph" class="education-link">
+                    <div class="education-tile" style="background-image: url('img/shs.jpg');">
+                        <div class="education-content">
+                            <h2>Senior High School</h2>
+                            <h3>Emilio Aguinaldo College - Cavite Campus</h3>
+                            <span>2020 - 2022</span>
                         </div>
                     </div>
                 </a>
-            </div>
-                <a href="https://tarasilang.site" class="education-link">
-                    <div class="tile2" style="background-image: url('img/Works/tarasilang.png');">
-                        <div class="tile-content2">
-                            <h3>TARA SILANG APP</h3>
-                            <span>Silang Municipal Tourism Application</span>
+                <a href="https://www.facebook.com/CaviteStateUniversitySilangCampus" class="education-link">
+                    <div class="education-tile" style="background-image: url('img/col.jpg');">
+                        <div class="education-content">
+                            <h2>Bachelor’s Degree</h2>
+                            <h3>Cavite State University - Silang Campus</h3>
+                            <span>2022 - Present</span>
                         </div>
                     </div>
                 </a>
@@ -331,159 +154,258 @@
         </div>
     </section>
 
-        <!-- DIGITAL DESIGN -->
-        <section id="digital-design">
-            <h1 class="tiles-title1">Digital Design</h1>
-            <p>
-                These digital design projects showcase my ability to create visually engaging and
-                informative promotional materials for tourism and food brands.
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills-section">
+        <h2 class="skills-title">Skills</h2>
+
+        <!-- TECHNICAL SKILLS -->
+        <div class="skill-category technical">
+            <h2>Technical Skills</h2>
+            <p class="skill-description">
+                These are mostly basic technical abilities I have developed through projects and coursework. I specialize in web development, UI/UX design, and basic media skills.
             </p>
 
-            <div class="tiles1">
-                <a href="https://drive.google.com/drive/folders/1wfbVDuxsT9rHzD7hc5uLB6A_oW4Y5lPC?usp=sharing" class="education-link">
-                    <div class="tile1" style="background-image: url('img/digi/tarasilangbrochure.png');">
-                            <div class="tile-content1">
-                                <h3>TARA SILANG BROCHURE</h3>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://drive.google.com/drive/folders/1NoUZHEWXah5jCviNRMekoIfUi4jxk1V9?usp=drive_link" class="education-link">
-                        <div class="tile1" style="background-image: url('img/digi/fruitydip.png');">
-                            <div class="tile-content1">
-                                <h3>FRUITY DIPS BROCHURE</h3>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+            <div class="skill">
+                <div class="skill-name"><span>HTML</span><span>90%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill tech-fill" style="width: 90%"></div></div>
+                <p class="skill-note">Can do basic HTML structuring web pages.</p>
             </div>
-        </section>
-
-        <!-- FILM WORKS -->
-        <section id="film-works">
-            <h1 class="tiles-title2">Film Works</h1>
-            <p>
-                These film projects were created during my sophomore year, where our team collaborated 
-                to produce short films and music videos. This experience helped me strengthen my storytelling, 
-                creativity, and teamwork skills.
-            </p>
-
-            <div class="tiles2">
-                <a href="https://youtu.be/tCqCZ6eB_04" class="education-link">
-                    <div class="tile2" style="background-image: url('img/film/ikawparin.png');">
-                        <div class="tile-content2">
-                            <h3>Ikaw Pa Rin Ang Pipiliin Ko by Cup of Joe | Music Video </h3>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="https://drive.google.com/file/d/15epKwddcyCs766vHY-snPJWuEAg2qnS7/view?usp=sharing" class="education-link">
-                    <div class="tile2" style="background-image: url('img/film/trustnoone.png');">
-                        <div class="tile-content2">
-                            <h3>Trust No One | Short Film</h3>
-                        </div>
-                    </div>
-                </a>
+            <div class="skill">
+                <div class="skill-name"><span>CSS</span><span>80%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill tech-fill" style="width: 80%"></div></div>
+                <p class="skill-note">Can do basic styling for responsive and modern layouts.</p>
             </div>
-        </section>
-
-        <!-- IMAGE LIGHTBOX -->
-        <div id="lightbox">
-            <span class="close-btn">&times;</span>
-            <img id="lightbox-img" src="" alt="Full Image">
+            <div class="skill">
+                <div class="skill-name"><span>UI/UX Design</span><span>85%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill tech-fill" style="width: 85%"></div></div>
+                <p class="skill-note">Can create a design and user interface.</p>
+            </div>
+            <div class="skill">
+                <div class="skill-name"><span>Photography</span><span>85%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill tech-fill" style="width: 85%"></div></div>
+                <p class="skill-note">Experience taking photos and basic color grading.</p>
+            </div>
+            <div class="skill">
+                <div class="skill-name"><span>Videography</span><span>75%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill tech-fill" style="width: 75%"></div></div>
+                <p class="skill-note">Can take videos and edit them with simple transitions.</p>
+            </div>
         </div>
-        <!-- PITIK NI YANYANNIEEY -->
-        <section id="pitik-yanyannieey">
-            <h1 class="tiles-title1">Pitik ni Yanyannieey</h1>
-            <p>
-                A collection of behind-the-scenes moments captured during film productions and events. 
-                These candid shots highlight creativity, teamwork, and unforgettable memories. <br>
-                For more of my work, you may also visit my Instagram account at <a href="https://www.instagram.com/pitikniyanyan/">@pitikniyanyan</a>.
+
+        <!-- SOFT SKILLS -->
+        <div class="skill-category soft">
+            <h2>Soft Skills</h2>
+            <p class="skill-description">
+                I value communication and collaboration, which help me work effectively in team settings. These soft skills complement my technical expertise.
             </p>
 
-            <div class="tiles1">
-                <div class="tile1" style="background-image: url('img/pitik/pitik1.JPG');">
-                    </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik2.JPG');">
-                    </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik3.JPG');">
-                    </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik4.JPG');">
-                    </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik5.JPG');">
-                    </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik6.JPG');">
-                    </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik7.JPG');">
-                    </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik8.JPG');">
-                    </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik9.JPG');">
-                    </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik10.JPG');">
-                    </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik11.JPG');">
-                    </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik12.JPG');">
-                    </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik13.JPG');">
-                    </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik14.JPG');">
-                    </div>
-                    <div class="tile1" style="background-image: url('img/pitik/pitik15.JPG');">
-                    </div>
+            <div class="skill">
+                <div class="skill-name"><span>Communication</span><span>90%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill soft-fill" style="width: 90%"></div></div>
+                <p class="skill-note">Clear and effective in verbal communication and basic written communication.</p>
+            </div>
+            <div class="skill">
+                <div class="skill-name"><span>Teamwork</span><span>85%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill soft-fill" style="width: 85%"></div></div>
+                <p class="skill-note">Good at collaborating and contributes positively to team goals.</p>
+            </div>
+            <div class="skill">
+                <div class="skill-name"><span>Time Management</span><span>80%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill soft-fill" style="width: 80%"></div></div>
+                <p class="skill-note">Can finish tasks in the allotted time.</p>
+            </div>
+            <div class="skill">
+                <div class="skill-name"><span>Creativity</span><span>85%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill soft-fill" style="width: 85%"></div></div>
+                <p class="skill-note">Brings innovative ideas and solutions to projects.</p>
+            </div>
+            <div class="skill">
+                <div class="skill-name"><span>Problem Solving</span><span>75%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill soft-fill" style="width: 75%"></div></div>
+                <p class="skill-note">Able to analyze issues and implement effective solutions.</p>
+            </div>
+        </div>
+    </section>
 
-
-        </section>
-        <!-- CONTACT SECTION -->
-        <section id="contact">
-            <div class="contact-wrapper">
-                                <!-- IMAGE COLUMN -->
-                <div class="contact-image">
-                <img src="img/y1.jpg" alt="Yannie Photo">
+ <!-- WORKS SECTION -->
+    <section id="works">
+        <h1 class="tiles-title2">Works</h1>
+        <p>
+            These are some of the applications and systems I developed throughout my academic journey.
+            Each project allowed me to apply my technical knowledge while solving real-world problems
+            through design, development, and collaboration.
+        </p>
+        <div class="tiles2">
+            <a href="https://drive.google.com/drive/folders/15er0vrfBZm7zTpiln4YwGrBkgeYcXIxL?usp=sharing" class="education-link">
+                <div class="tile2" style="background-image: url('img/Works/demon-slayer.png');">
+                    <div class="tile-content2">
+                        <h3>Demon Slayer Redeem Nezuko Chan</h3>
+                        <span>A Demon Slayer inspired game developed using GDevelop</span>
+                    </div>
                 </div>
+            </a>
+            <a href="https://drive.google.com/drive/folders/1poaoD6Me_Ob5YMZSP8Qa8NEqcyQtFWvb?usp=drive_link" class="education-link">
+                <div class="tile2" style="background-image: url('img/Works/sit&zip.png');">
+                    <div class="tile-content2">
+                        <h3>SIT & ZIP</h3>
+                        <span>Sales Management & Reservation App</span>
+                    </div>
+                </div>
+            </a>
+            <a href="https://drive.google.com/drive/folders/1UxKsvsP6wdxD9-K_pDnse6QF9NNwAuZa?usp=sharing" class="education-link">
+                <div class="tile2" style="background-image: url('img/Works/lesserafim.png');">
+                    <div class="tile-content2">
+                        <h3>LESSERAFIM DISCOGRAPHY</h3>
+                        <span>K-Pop Group Discography Website</span>
+                    </div>
+                </div>
+            </a>
+            <a href="https://tarasilang.site" class="education-link">
+                <div class="tile2" style="background-image: url('img/Works/tarasilang.png');">
+                    <div class="tile-content2">
+                        <h3>TARA SILANG APP</h3>
+                        <span>Silang Municipal Tourism Application</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
 
-                <!-- FORM COLUMN -->
-                <div class="contact-form">
+    <!-- DIGITAL DESIGN SECTION -->
+    <section id="digital-design">
+        <h1 class="tiles-title1">Digital Design</h1>
+        <p>
+            These digital design projects showcase my ability to create visually engaging and
+            informative promotional materials for tourism and food brands.
+        </p>
+        <div class="tiles1">
+            <a href="https://drive.google.com/drive/folders/1wfbVDuxsT9rHzD7hc5uLB6A_oW4Y5lPC?usp=sharing" class="education-link">
+                <div class="tile1" style="background-image: url('img/digi/tarasilangbrochure.png');">
+                    <div class="tile-content1">
+                        <h3>TARA SILANG BROCHURE</h3>
+                    </div>
+                </div>
+            </a>
+            <a href="https://drive.google.com/drive/folders/1NoUZHEWXah5jCviNRMekoIfUi4jxk1V9?usp=drive_link" class="education-link">
+                <div class="tile1" style="background-image: url('img/digi/fruitydip.png');">
+                    <div class="tile-content1">
+                        <h3>FRUITY DIPS BROCHURE</h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- FILM WORKS SECTION -->
+    <section id="film-works">
+        <h1 class="tiles-title2">Film Works</h1>
+        <p>
+            These film projects were created during my sophomore year, where our team collaborated 
+            to produce short films and music videos. This experience helped me strengthen my storytelling, 
+            creativity, and teamwork skills.
+        </p>
+        <div class="tiles2">
+            <a href="https://youtu.be/tCqCZ6eB_04" class="education-link">
+                <div class="tile2" style="background-image: url('img/film/ikawparin.png');">
+                    <div class="tile-content2">
+                        <h3>Ikaw Pa Rin Ang Pipiliin Ko by Cup of Joe | Music Video</h3>
+                    </div>
+                </div>
+            </a>
+            <a href="https://drive.google.com/file/d/15epKwddcyCs766vHY-snPJWuEAg2qnS7/view?usp=sharing" class="education-link">
+                <div class="tile2" style="background-image: url('img/film/trustnoone.png');">
+                    <div class="tile-content2">
+                        <h3>Trust No One | Short Film</h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- PITIK NI YANYANNIEEY SECTION -->
+    <section id="pitik-yanyannieey">
+        <h1 class="tiles-title1">Pitik ni Yanyannieey</h1>
+        <p>
+            A collection of behind-the-scenes moments captured during film productions and events. 
+            These candid shots highlight creativity, teamwork, and unforgettable memories. <br>
+            For more of my work, visit my Instagram at <a href="https://www.instagram.com/pitikniyanyan/">@pitikniyanyan</a>.
+        </p>
+        <div class="tiles1">
+            <div class="tile1" style="background-image: url('img/pitik/pitik1.JPG');"></div>
+            <div class="tile1" style="background-image: url('img/pitik/pitik2.jpg');"></div>
+            <div class="tile1" style="background-image: url('img/pitik/pitik3.JPG');"></div>
+            <div class="tile1" style="background-image: url('img/pitik/pitik4.JPG');"></div>
+            <div class="tile1" style="background-image: url('img/pitik/pitik5.JPG');"></div>
+            <div class="tile1" style="background-image: url('img/pitik/pitik6.JPG');"></div>
+            <div class="tile1" style="background-image: url('img/pitik/pitik7.JPG');"></div>
+            <div class="tile1" style="background-image: url('img/pitik/pitik8.JPG');"></div>
+            <div class="tile1" style="background-image: url('img/pitik/pitik9.JPG');"></div>
+            <div class="tile1" style="background-image: url('img/pitik/pitik10.JPG');"></div>
+            <div class="tile1" style="background-image: url('img/pitik/pitik11.JPG');"></div>
+            <div class="tile1" style="background-image: url('img/pitik/pitik12.JPG');"></div>
+            <div class="tile1" style="background-image: url('img/pitik/pitik13.JPG');"></div>
+            <div class="tile1" style="background-image: url('img/pitik/pitik14.JPG');"></div>
+            <div class="tile1" style="background-image: url('img/pitik/pitik15.JPG');"></div>
+            <div class="tile1" style="background-image: url('img/pitik/pitik16.JPG');"></div>
+            <div class="tile1" style="background-image: url('img/pitik/pitik17.JPG');"></div>
+            <div class="tile1" style="background-image: url('img/pitik/pitik18.JPG');"></div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="contact-wrapper">
+            <div class="contact-image">
+                <img src="img/y1.jpg" alt="Yannie Photo">
+            </div>
+            <div class="contact-form">
                 <h2>Contact Me</h2>
                 <p>Via Email or Social Media Accounts</p>
-
                 <form action="https://formspree.io/f/xjkwbrpn" method="POST">
                     <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
                     </div>
-                    </div>
-
-                    <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="6" required></textarea>
-                    </div>
-
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
-
-                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-          <footer class="footer">
-            <hr>
-            <div class="footer-content">
+    <!-- LIGHTBOX -->
+    <div id="lightbox">
+        <span class="close-btn">&times;</span>
+        <img id="lightbox-img" src="" alt="Full Image">
+    </div>
+
+    <!-- Go To Top Button -->
+        <a href="#" class="gotopbtn"><img src="Img/up-arrow.png" alt="Go to top"></a>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Get in Touch -->
             <div class="footer-nav">
                 <h2>Get in Touch</h2>
-                <a href="contact.html">julianarosemaloloyon1010@gmail.com</a>
+                <a href="mailto:julianarosemaloloyon1010@gmail.com">julianarosemaloloyon1010@gmail.com</a>
+            </div>
+
+            <!-- Address -->
+            <div class="footer-nav">
                 <h2>Address</h2>
                 <p>Dasmariñas City, Province of Cavite</p>
             </div>
-                
-            <div class="copyright"><p class="copyright">Copyright ©2025; Designed by <span>Maloloy-on, Juliana Rose </span></p></div>
 
+            <!-- Social Icons -->
             <div class="footer-social-icons">
                 <a href="https://www.facebook.com/Yannieee.Rose"><img src="Img/facebook.png" alt="Facebook"></a>
                 <a href="https://www.instagram.com/yannieeeyy/"><img src="Img/instagram.png" alt="Instagram"></a>
@@ -491,100 +413,73 @@
                 <a href="https://www.tiktok.com/@yan.yannieee"><img src="Img/tiktok.png" alt="TikTok"></a>
             </div>
         </div>
-        </footer>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>Copyright ©2025; Designed by <span>Maloloy-on, Juliana Rose</span></p>
+        </div>
+
+        <!-- Go To Top Button -->
+        <a href="#" class="gotopbtn"><img src="Img/up-arrow.png" alt="Go to top"></a>
+    </footer>
 
 
 
+    <!-- JAVASCRIPT -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
 
-   <script>
-    document.addEventListener("DOMContentLoaded", () => {
+        // Show/hide Go To Top button on scroll
+    window.addEventListener('scroll', function() {
+        const goTopBtn = document.querySelector('.gotopbtn');
 
-        // ================= NAVBAR =================
-        const navbar = document.querySelector('.navbar');
-        const navLinks = document.querySelector('.nav-links');
-        const hamburger = document.querySelector('.hamburger');
+        if (window.scrollY > 300) { // appear after scrolling 300px
+            goTopBtn.style.display = 'block';
+            goTopBtn.style.opacity = '1';
+        } else {
+            goTopBtn.style.opacity = '0';
+            goTopBtn.style.display = 'none';
+        }
+    });
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('open');
-        });
+    // Smooth scroll to top when clicked
+    document.querySelector('.gotopbtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+        document.addEventListener("DOMContentLoaded", () => {
 
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                hamburger.classList.remove('open');
+            // NAVBAR TOGGLE
+            const navbar = document.querySelector('.navbar');
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger');
+
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('open');
             });
-        });
 
-        // ================= ABOUT SECTION (FIXED) =================
-        const aboutimg = document.getElementById("about-img");
-        if (!aboutimg) return;
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    hamburger.classList.remove('open');
+                });
+            });
 
-        const tabImages = {
-            'basic-info': [
-                "img/DiscoverMe1.png",
-                "img/DiscoverMe2.png",
-                "img/DiscoverMe3.png",
-                "img/DiscoverMe4.png"
-            ],
-            'education': [
-                "img/DiscoverMe2.png",
-                "img/DiscoverMe3.png",
-                "img/DiscoverMe1.png",
-                "img/DiscoverMe4.png"
-            ],
-            'hobbies': [
-                "img/DiscoverMe3.png",
-                "img/DiscoverMe1.png",
-                "img/DiscoverMe2.png",
-                "img/DiscoverMe4.png"
-            ],
-            'favorites': [
-                "img/DiscoverMe4.png",
-                "img/DiscoverMe1.png",
-                "img/DiscoverMe2.png",
-                "img/DiscoverMe3.png"
-            ]
-        };
+            // ABOUT SECTION SLIDESHOW
+            const aboutimg = document.getElementById("about-img");
+            if (!aboutimg) return;
 
-        let currentImages = tabImages['basic-info'];
-        let currentIndex = 0;
+            const tabImages = {
+                'basic-info': ["img/about/b1.jpg","img/about/b2.jpg","img/about/b3.jpg","img/about/b4.jpg","img/about/b5.jpg","img/about/b6.jpg"],
+                'hobbies': ["img/about/h1.jpg","img/about/h2.jpg","img/about/h3.jpg","img/about/h4.jpg","img/about/h5.jpg","img/about/h6.jpg"],
+                'favorites': ["img/about/f1.jpg","img/about/f2.jpg","img/about/f3.jpg","img/about/f4.jpg","img/about/f5.jpg","img/about/f6.jpg","img/about/f7.jpg"]
+            };
 
-        let slideshow = setInterval(() => {
-            currentIndex = (currentIndex + 1) % currentImages.length;
-            aboutimg.style.opacity = 0;
-            setTimeout(() => {
-                aboutimg.src = currentImages[currentIndex];
-                aboutimg.style.opacity = 1;
-            }, 300);
-        }, 3000);
+            let currentImages = tabImages['basic-info'];
+            let currentIndex = 0;
 
-        window.showTab = function(tabId) {
-            const tabs = document.querySelectorAll('.tab');
-            const contents = document.querySelectorAll('.tab-content');
-
-            tabs.forEach(tab => tab.classList.remove('active'));
-            contents.forEach(content => content.classList.remove('active'));
-
-            const clickedTab = document.querySelector(`.tab[onclick="showTab('${tabId}')"]`);
-            if (clickedTab) clickedTab.classList.add('active');
-
-            const activeContent = document.getElementById(tabId);
-            if (activeContent) activeContent.classList.add('active');
-
-            if (!tabImages[tabId]) return;
-
-            currentImages = tabImages[tabId];
-            currentIndex = 0;
-
-            aboutimg.style.opacity = 0;
-            setTimeout(() => {
-                aboutimg.src = currentImages[currentIndex];
-                aboutimg.style.opacity = 1;
-            }, 300);
-
-            clearInterval(slideshow);
-            slideshow = setInterval(() => {
+            let slideshow = setInterval(() => {
                 currentIndex = (currentIndex + 1) % currentImages.length;
                 aboutimg.style.opacity = 0;
                 setTimeout(() => {
@@ -592,39 +487,62 @@
                     aboutimg.style.opacity = 1;
                 }, 300);
             }, 3000);
-        };
 
-    });
+            window.showTab = function(tabId) {
+                const tabs = document.querySelectorAll('.tab');
+                const contents = document.querySelectorAll('.tab-content');
 
-    const tiles = document.querySelectorAll('#pitik-yanyannieey .tile1');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const closeBtn = document.querySelector('.close-btn');
+                tabs.forEach(tab => tab.classList.remove('active'));
+                contents.forEach(content => content.classList.remove('active'));
 
-    tiles.forEach(tile => {
-        tile.addEventListener('click', () => {
-            const bgImage = tile.style.backgroundImage;
-            const imageUrl = bgImage.slice(5, -2);
-            lightboxImg.src = imageUrl;
-            lightbox.classList.add('active');
+                const clickedTab = document.querySelector(`.tab[onclick="showTab('${tabId}')"]`);
+                if (clickedTab) clickedTab.classList.add('active');
+
+                const activeContent = document.getElementById(tabId);
+                if (activeContent) activeContent.classList.add('active');
+
+                if (!tabImages[tabId]) return;
+
+                currentImages = tabImages[tabId];
+                currentIndex = 0;
+
+                aboutimg.style.opacity = 0;
+                setTimeout(() => {
+                    aboutimg.src = currentImages[currentIndex];
+                    aboutimg.style.opacity = 1;
+                }, 300);
+
+                clearInterval(slideshow);
+                slideshow = setInterval(() => {
+                    currentIndex = (currentIndex + 1) % currentImages.length;
+                    aboutimg.style.opacity = 0;
+                    setTimeout(() => {
+                        aboutimg.src = currentImages[currentIndex];
+                        aboutimg.style.opacity = 1;
+                    }, 300);
+                }, 3000);
+            };
+
+            // LIGHTBOX FOR PITIK
+            const tiles = document.querySelectorAll('#pitik-yanyannieey .tile1');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeBtn = document.querySelector('.close-btn');
+
+            tiles.forEach(tile => {
+                tile.addEventListener('click', () => {
+                    const bgImage = tile.style.backgroundImage;
+                    const imageUrl = bgImage.slice(5, -2);
+                    lightboxImg.src = imageUrl;
+                    lightbox.classList.add('active');
+                });
+            });
+
+            closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
+            lightbox.addEventListener('click', (e) => { if(e.target===lightbox) lightbox.classList.remove('active'); });
+            document.addEventListener('keydown', (e) => { if(e.key==='Escape') lightbox.classList.remove('active'); });
+
         });
-    });
-
-    closeBtn.addEventListener('click', () => {
-        lightbox.classList.remove('active');
-    });
-
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-            lightbox.classList.remove('active');
-        }
-    });
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            lightbox.classList.remove('active');
-        }
-    });
     </script>
 
 </body>
