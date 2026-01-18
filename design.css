@@ -46,7 +46,8 @@ body {
 .nav-links li { list-style: none; }
 
 .nav-link {
-    color: #fff;
+    color: #562727;
+    font-weight: 500;
     font-size: 17px;
     text-decoration: none;
     padding: 4px 8px;
@@ -109,22 +110,32 @@ body {
 .home-left h1 {
     font-size: 48px;
     font-weight: 700;
-    background: linear-gradient(90deg, #562727, #ffb4b4, #562727);
-    background-size: 200% auto;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    animation: shine 3s linear infinite;
+    display: inline-block;
+
+    /* Gradient background for the text */
+    background: linear-gradient(90deg, #ffb4b4, #562727, #ffb4b4);
+    background-size: 300% 100%;        /* make gradient wider than text */
+    background-repeat: no-repeat;
+
+    /* Clip the gradient to the text */
+    -webkit-background-clip: text;      /* Chrome, Safari */
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;              /* standard property */
+    color: transparent;                 /* fallback */
+
+    /* Animate the gradient */
+    animation: shine-text 3s linear infinite;
 }
 
-@keyframes shine {
-    0% { background-position: -200% center; }
-    100% { background-position: 200% center; }
+@keyframes shine-text {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 0%; }
+    100% { background-position: 0% 0%; }
 }
 
 .home-left .intro {
     font-size: 18px;
-    margin: 60px 0;
+    margin: 40px 10px;
     color: #fff; /* intro white */
 }
 
@@ -168,12 +179,12 @@ body {
 }
 
 .tiles-title {
-    font-size: 20px;
+    font-size: 40px;
     color: #562727; /* title dark red */
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     display: inline-block;       /* shrink border to text width */
     border-bottom: 3px solid #562727; /* dark red underline */
-    padding-bottom: 10px;       /* space between text and border */
+    padding-bottom: 15px;       /* space between text and border */
     
 }
 
@@ -216,7 +227,6 @@ body {
     width: 100%;
     padding: 10px 0;
     background: rgba(255, 255, 255, 0.5);
-    color: #fff;
     transition: background 0.3s;
 }
 
@@ -241,7 +251,7 @@ body {
     color: #fff;
 }
 
-/* Wrapper */
+/* Wrapper for Profile & Info */
 .aboutme {
     display: flex;
     gap: 15px;
@@ -250,6 +260,7 @@ body {
     align-items: stretch;
 }
 
+/* Education Section */
 .about-education {
     width: 100%;
     max-width: 1400px;
@@ -260,7 +271,7 @@ body {
 
 .about-education h2 {
     font-size: 20px;
-    color: #562727; /* title dark red */
+    color: #562727; /* Title dark red */
     margin-bottom: 15px;
 }
 
@@ -284,7 +295,7 @@ body {
     height: 600px;
     object-fit: cover;
     border-radius: 20px;
-    border: 4px solid #ff9d9d;
+    border: 4px solid #562727;
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -294,7 +305,7 @@ body {
     background-color: rgba(0, 0, 0, 0.074);
     border-radius: 18px;
     padding: 30px;
-    border: 2px solid #ff9d9d;
+    border: 2px solid #562727;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -302,13 +313,13 @@ body {
 
 .about-section h1 {
     font-size: 32px;
-    color: #562727; /* dark red title */
+    color: #562727; /* Dark red title */
 }
 
 .about-section p {
     font-size: 16px;
     line-height: 1.8;
-    color: #fff; /* text white */
+    color: #fff; /* Text white */
 }
 
 /* ================= TABS ================= */
@@ -322,8 +333,8 @@ body {
 
 .tab {
     padding: 8px 15px;
-    background-color: #444;
-    color: #fff;
+    background-color: #d3bfbf;
+    color: #562727;
     border-radius: 20px;
     cursor: pointer;
     font-size: 14px;
@@ -333,7 +344,7 @@ body {
 .tab:hover,
 .tab.active {
     background-color: #ff9d9d;
-    color: #562727; /* active tab dark red */
+    color: #562727; /* Active tab dark red */
 }
 
 /* ================= TAB CONTENT ================= */
@@ -341,11 +352,10 @@ body {
     display: none;
     margin-top: 15px;
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(204, 151, 151, 0.3);
     border-radius: 12px;
     border: 2px solid #ff9d9d;
-    color: #fff; /* text white */
-    
+    color: #fff; /* Text white */
 }
 
 .tab-content.active {
@@ -357,8 +367,9 @@ body {
 .hobbies,
 .Fav {
     font-weight: 600;
-    color: #ff9d9d;
+    color: #562727;
 }
+
 
 /* ================= EDUCATION SECTION ================= */
 .about-education {
@@ -417,7 +428,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.484);
+    background-color: rgba(73, 71, 71, 0.484);
     z-index: 0;
     border-radius: 15px;
 }
@@ -425,7 +436,8 @@ body {
 /* Hover effect */
 .education-tile:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 15px 30px rgb(0, 0, 0);
+    
 }
 
 /* ================= EDUCATION CONTENT ================= */
@@ -457,7 +469,7 @@ body {
     margin: auto 0 0 0;   /* top margin pushes it to bottom */
     padding: 2px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     color: #fff;
     text-align: center;
     line-height: 1.1;
@@ -499,7 +511,7 @@ body {
     font-size: 26px;
     margin-bottom: 5px;
     text-align: center;
-    color: #fff;
+    color: #562727;
 }
 /* Skills section description (same as Works / Education) */
 .skills-desc {
@@ -546,7 +558,7 @@ body {
     justify-content: space-between;
     margin-bottom: 5px;
     font-weight: 600;
-    color: #fff;
+    color: #562727;
 }
 
 .skill-bar {
@@ -641,7 +653,7 @@ body {
 
 #works .tile2:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 15px 30px rgb(0, 0, 0);
 }
 
 #works .tile-content2 {
@@ -649,7 +661,7 @@ body {
     bottom: 0;
     width: 100%;
     padding: 15px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent);
     color: #fff;
 }
 
@@ -706,7 +718,7 @@ body {
 
 #digital-design .tile1:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 15px 30px rgb(0, 0, 0);
 }
 
 #digital-design .tile-content1 {
@@ -714,7 +726,7 @@ body {
     bottom: 0;
     width: 100%;
     padding: 15px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent);
     color: #fff;
 }
 
@@ -761,7 +773,7 @@ body {
 
 #film-works .tile2:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 15px 30px rgb(0, 0, 0);
 }
 
 #film-works .tile-content2 {
@@ -769,7 +781,7 @@ body {
     bottom: 0;
     width: 100%;
     padding: 15px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent);
     color: #fff;
 }
 
@@ -808,7 +820,7 @@ body {
 
 /* Photo Tiles */
 #pitik-yanyannieey .tile1 {
-    height: 220px;
+    height: 300px;
     border-radius: 15px;
     background-size: cover;
     object-fit: contain;
@@ -821,12 +833,13 @@ body {
 
 /* Hover Effect */
 #pitik-yanyannieey .tile1:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgb(0, 0, 0);
 }
 #pitik-yanyannieey a {
     color: #562727;          /* uses the paragraph text color */
     text-decoration: none;   /* removes underline */
+    font-size: 19px;
     font-weight: 600;        /* optional: makes it stand out */
 }
 
@@ -1086,14 +1099,42 @@ body {
 /* Copyright Row */
 .footer .copyright {
     font-size: 14px;
-    color: #fff;
+    color: #562727;
     opacity: 0.7;
+    padding-top: 20px;
+    padding-left: 110px;
+
+    
 }
 
 .footer .copyright span {
     font-weight: 600;
+    color: #562727;
+}
+
+/* ================= Go To Top Button ================= */
+.gotopbtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;        
+    z-index: 9999;        
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    /* Circular button styling */
+}
+
+.gotopbtn img {
+    width: 24px;       /* proper fixed size */
+    height: 24px;      /* proper fixed size */
+    display: block;    /* removes inline spacing issues */
+    margin: 0;         /* ensure perfectly centered */
+    padding: 0;        /* remove padding */
+    object-fit: contain;
 }
 /* ================= RESPONSIVE ================= */
+
 
 /* TABLETS (≤ 768px) */
 @media (max-width: 768px) {
@@ -1188,7 +1229,8 @@ body {
         height: 160px;
         scroll-snap-align: start;
     }
-     .education-tiles {
+
+    .education-tiles {
         grid-template-columns: repeat(2, 1fr); /* ✅ TWO COLUMNS */
         gap: 15px;
     }
@@ -1198,10 +1240,8 @@ body {
     }
 }
 
-
 /* PHONES (≤ 480px) */
 @media (max-width: 480px) {
-
     .logo img {
         width: 60px;
     }
@@ -1237,96 +1277,44 @@ body {
     .tile-content h3 {
         font-size: 15px;
     }
-    .aboutme {
-        flex-direction: column;
-        gap: 25px;
-    }
 
-    .about-section {
-        padding: 20px;
-    }
-    .profile-section {
-        width: 100%;
-    }
-
-    .profile-img {
-        width: 100%;
-        height: auto;          /* ✅ FIX */
-        aspect-ratio: 4 / 3;
-        border-radius: 16px;
-    }
-
-    .about-img {
-        width: 180px;
-        height: 180px;
-    }
-
-    .about-right h2 {
-        font-size: 22px;
-    }
-
-    .about-right p {
-        font-size: 14px;
-    }
-
-    .tab {
-        font-size: 12px;
-        padding: 6px 12px;
-    }
-    .about-education h2 {
-        font-size: 26px;
-    }
-
-    .about-education .education-desc {
-        font-size: 14px;
-        line-height: 1.5;
-        max-width: 90%;
-        margin-bottom: 30px;
-    }
-     .education-tiles {
+    .education-tiles {
         grid-template-columns: 1fr; /* stack vertically */
         gap: 15px;
     }
+
     .education-tile {
         height: 200px;
     }
+
     .education-content h2 {
         font-size: 18px;
     }
     .education-content h3 {
-        font-size: 14px;
-    }
-    .education-content span {
-        font-size: 12px;
-    }
-
-    .education-content h3 {
         font-size: 16px;
     }
-
     .education-content span {
         font-size: 14px;
     }
-     .skill-category h2 {
-      font-size: 24px;
-    }
 
-    .skill-bar {
-      height: 18px;
-    }
     .skill-category h2 {
         font-size: 20px;
     }
 
+    .skill-bar {
+        height: 18px;
+    }
+
     .skill-bar-fill {
-      font-size: 13px;
-      line-height: 18px;
+        font-size: 13px;
+        line-height: 18px;
     }
 
     .skill .skill-name {
-      font-size: 14px;
+        font-size: 14px;
     }   
-     .tiles2 {
+
+    .tiles2 {
         grid-template-columns: 1fr; /* stack tiles vertically */
         gap: 15px;
     }
@@ -1339,14 +1327,17 @@ body {
     .tile-content2 span {
         font-size: 11px;
     }
+
     #works p {
         font-size: 14px;
         padding: 0 10px;
     }
-      .education-tile {
-        aspect-ratio: 1;           /* keep square for small phones */
+
+    .education-tile {
+        aspect-ratio: 1; /* keep square for small phones */
     }
-     #digital-design,
+
+    #digital-design,
     #film-works,
     #pitik-yanyannieey {
         padding: 50px 5%;
@@ -1383,215 +1374,10 @@ body {
         max-width: 95%;
         max-height: 80%;
     }
-     .contact-wrapper {
-    flex-direction: column; /* stack image & form */
-    max-width: 90%;
-    }
 
-    .contact-image img {
-        height: 400px; /* reduce image height */
-    }
-
-    .contact-form {
-        padding: 30px;
-    }
-
-    .contact-form h2 {
-        font-size: 36px;
-    }
-
-    .contact-form p {
-        font-size: 15px;
-    }
-}
-
-/* SMALL PHONES */
-@media (max-width: 360px) {
-
-    .home-left h1 {
-        font-size: 32px;
-    }
-
-    .home-left h2 {
-        font-size: 20px;
-    }
-
-    .home-left .intro {
-        font-size: 15px;
-    }
-
-    .home-right img {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    .tiles {
-        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-        gap: 12px;
-    }
-
-    .tiles-title {
-        font-size: 24px;
-        margin-bottom: 25px;
-    }
-
-    .tile {
-        height: 150px;
-    }
-
-    .tile-content h3 {
-        font-size: 15px;
-    }
-    .aboutme {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .about-section {
-        padding: 20px;
-    }
-    .profile-section {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .profile-img {
-        width: 100%;
-        height: auto;          /* ✅ FIX */
-        aspect-ratio: 4 / 3;
-        border-radius: 16px;
-    }
-
-    .about-section {
-        width: 100%;
-        padding: 15px;
-        text-align: center;
-    }
-
-    .about-section h1 {
-        font-size: 20px;
-    }
-
-    .about-section p {
-        font-size: 13px;
-        line-height: 1.6;
-    }
-
-    .tabs {
-        justify-content: center;
-    }
-
-    .tab {
-        font-size: 12px;
-        padding: 6px 12px;
-    }
-     .about-education h2 {
-        font-size: 22px;
-    }
-
-    .about-education .education-desc {
-        font-size: 14px;
-        line-height: 1.5;
+    .contact-wrapper {
+        flex-direction: column; /* stack image & form */
         max-width: 90%;
-        margin-bottom: 30px;
-    }
-     .education-tiles {
-        grid-template-columns: 1fr; /* stack vertically */
-        gap: 15px;
-    }
-    .education-tile {
-        height: 180px;
-    }
-    .education-content h2 {
-        font-size: 18px;
-    }
-    .education-content h3 {
-        font-size: 12px;
-    }
-    .education-content span {
-        font-size: 12px;
-    }
-
-    .education-content h3 {
-        font-size: 14px;
-    }
-
-    .education-content span {
-        font-size: 14px;
-    }
-     .skill-category h2 {
-      font-size: 22px;
-    }
-
-    .skill-bar {
-      height: 18px;
-    }
-    .skills-section > h2 {
-        font-size: 24px;
-    }
-
-    .skill-bar-fill {
-      font-size: 12px;
-      line-height: 16px;
-    }
-
-    .skill .skill-name {
-      font-size: 14px;
-    }   
-     .tiles2 {
-        grid-template-columns: 1fr; /* stack tiles vertically */
-        gap: 15px;
-    }
-      .tile2 {
-        height: 160px;
-    }
-    .tile-content2 h3 {
-        font-size: 13px;
-    }
-    .tile-content2 span {
-        font-size: 11px;
-    }
-    #works p {
-        font-size: 14px;
-        padding: 0 10px;
-    }
-      .education-tile {
-        aspect-ratio: 1;           /* keep square for small phones */
-    }
-     #digital-design h1,
-    #film-works h1,
-    #pitik-yanyannieey h1 {
-        font-size: 28px;
-    }
-
-    #digital-design p,
-    #film-works p,
-    #pitik-yanyannieey p {
-        font-size: 13px;
-    }
-
-    .tiles,
-    .tiles1,
-    .tiles2 {
-        grid-template-columns: 1fr;
-    }
-
-    .tile,
-    .tile1,
-    .tile2 {
-        height: 180px;
-        gap: 16px;
-        overflow: hidden;  /* hides anything overflowing the tile */
-        border-radius: 15px; /* keeps the rounded corners consistent */
-    }
-
-    #lightbox img {
-        max-width: 95%;
-        max-height: 80%;
-    }
-     .contact-wrapper {
-    flex-direction: column; /* stack image & form */
-    max-width: 90%;
     }
 
     .contact-image img {
@@ -1662,6 +1448,7 @@ body {
         gap: 10px;
     }
 }
+
 /* ===== TABLET (≤ 768px) ===== */
 @media (max-width: 768px) {
 
@@ -1745,10 +1532,182 @@ body {
   }
 }
 
+/* ================= ABOUT ME SECTION RESPONSIVE ================= */
+
+/* ===== TABLETS (≤ 768px) ===== */
+@media (max-width: 768px) {
+    #about {
+        padding: 50px 5%;
+    }
+
+    .aboutme {
+        flex-direction: column; /* column layout */
+        gap: 20px;
+        align-items: center;
+    }
+
+    .profile-section,
+    .about-section {
+        width: 100%;
+        flex: unset;
+    }
+
+    .profile-img {
+        height: 550px;
+    }
+
+    .about-section {
+        padding: 25px;
+    }
+
+    .about-section h1 {
+        font-size: 28px;
+    }
+
+    .about-section p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .tabs {
+        flex-direction: column;
+        gap: 15px;
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .tab {
+        font-size: 13px;
+        padding: 7px 12px;
+    }
+
+    .about-education h2 {
+        font-size: 18px;
+    }
+
+    .about-education .education-desc {
+        font-size: 14px;
+        max-width: 90%;
+    }
+}
+
+/* ===== PHONES (≤ 480px) ===== */
+@media (max-width: 480px) {
+    #about {
+        padding: 40px 4%;
+    }
+
+    .profile-img {
+        height: 350px;
+    }
+
+    .about-section {
+        padding: 20px;
+    }
+
+    .about-section h1 {
+        font-size: 24px;
+    }
+
+    .about-section p {
+        font-size: 14px;
+    }
+
+    .tab {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .about-education h2 {
+        font-size: 16px;
+    }
+
+    .about-education .education-desc {
+        font-size: 13px;
+    }
+}
+
+/* ===== SMALL PHONES (≤ 360px) ===== */
+@media (max-width: 360px) {
+    #about {
+        padding: 35px 3%;
+    }
+
+    .profile-img {
+        height: 300px;
+    }
+
+    .about-section {
+        padding: 15px;
+    }
+
+    .about-section h1 {
+        font-size: 22px;
+    }
+
+    .about-section p {
+        font-size: 13px;
+    }
+
+    .tab {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+
+    .about-education h2 {
+        font-size: 15px;
+    }
+
+    .about-education .education-desc {
+        font-size: 12px;
+    }
+}
+
+/* ===== EXTRA SMALL PHONES (≤ 320px) ===== */
+@media (max-width: 320px) {
+    #about {
+        padding: 30px 2.5%;
+    }
+
+    .profile-img {
+        height: 250px;
+    }
+
+    .about-section {
+        padding: 12px;
+    }
+
+    .about-section h1 {
+        font-size: 20px;
+    }
+
+    .about-section p {
+        font-size: 12px;
+    }
+
+    .tab {
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+
+    .about-education h2 {
+        font-size: 14px;
+    }
+
+    .about-education .education-desc {
+        font-size: 11px;
+    }
+}
+
+
+/* ===============================
+   FOOTER RESPONSIVE
+================================ */
+
 /* ===== TABLET (≤ 768px) ===== */
 @media (max-width: 768px) {
 
-  .footer {
+.footer {
     padding: 35px 4%;
   }
 
@@ -1781,6 +1740,7 @@ body {
     font-size: 13px;
   }
 }
+
 
 /* ===== MOBILE (≤ 480px) ===== */
 @media (max-width: 480px) {
@@ -1871,4 +1831,3 @@ body {
     font-size: 10px;
   }
 }
-
