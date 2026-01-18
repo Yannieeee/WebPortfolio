@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* ================= GLOBAL ================= */
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -16,7 +18,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    color: #fff;
+    color: #fff; /* general text color white */
     overflow-x: hidden;
 }
 
@@ -41,9 +43,7 @@ body {
     gap: 55px;
 }
 
-.nav-links li {
-    list-style: none;
-}
+.nav-links li { list-style: none; }
 
 .nav-link {
     color: #fff;
@@ -91,18 +91,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 80vh;
-    padding: 0 5%;
+    padding: 40px 5% 10px;
+    overflow: hidden;
 }
 
 .home-left {
     max-width: 50%;
+    position: relative;
+    z-index: 2;
 }
 
 .home-left h2 {
     font-size: 28px;
-    color: #562727; /* title dark red */
-    margin-bottom: 5px;
+    color: #562727;
 }
 
 .home-left h1 {
@@ -148,6 +149,7 @@ body {
 
 .home-right {
     max-width: 60%;
+    overflow: hidden;
 }
 
 .home-right img {
@@ -159,11 +161,10 @@ body {
 
 /* ================= CONTENT SECTION ================= */
 #content {
-    padding: 15px 10%;
+    padding: 10px 5% 30px;
     text-align: center;
-    margin: 40px auto; /* adds space above and below the section */
-    max-width: 1470px; /* optional: keeps section centered on large screens */
-    border-radius: 20px;        /* optional: rounded corners */
+    max-width: 1470px;
+    margin: 0 auto;
 }
 
 .tiles-title {
@@ -179,8 +180,8 @@ body {
 /* Tiles container */
 .tiles {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
     justify-items: center;
 }
 
@@ -188,22 +189,27 @@ body {
     width: 100%;
     max-width: 220px;
     height: 200px;
-    background-size: cover;
-    background-position: center;
+    border-radius: 15px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-    background-color: #ffb4b4;
-    border-radius: 15px;
+    transition: 0.3s;
 }
 
-.tile:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    background-color: #B45A5A;
+/* IMAGE INSIDE TILE */
+.tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.3s;
 }
 
+.tile:hover img {
+    transform: scale(1.05);
+}
+
+/* TILE CONTENT (OVERLAY) */
 .tile-content {
     position: absolute;
     bottom: 0;
@@ -983,226 +989,316 @@ body {
   background-color: #bd5050;
 }
 
-
-
-/* ===== FOOTER ===== */
-#footer {
-  background: linear-gradient(to bottom right, #FFECEC, #B45A5A, #FFECEC);
-  color: #fff;            /* yellow text for contrast */
-  font-family: 'Poppins', sans-serif;
-  padding: 40px 8%;
+/* ================= FOOTER ================= */
+.footer {
+    background: linear-gradient(to bottom right, #FFECEC, #B45A5A);
+    color: #562727;
+    padding: 40px 5%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
-  justify-content: space-between;
-  max-width: 1100px;
-  margin: 0 auto;
+.footer hr {
+    border: 0;
+    border-top: 2px solid #fff;
+    margin-bottom: 30px;
+    opacity: 0.3;
 }
 
-.footer-contact h3,
-.footer-social h3 {
-  font-size: 20px;
-  margin-bottom: 15px;
-  color: #562727;
+/* Footer content: row on desktop, column on mobile */
+.footer-content {
+    display: flex;
+    flex-direction: row; /* row on desktop */
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px; /* space between columns */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.footer-contact p {
-  margin: 5px 0;
-  font-size: 15px;
+/* Footer Nav (Get in Touch + Address) */
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* space between items */
+    text-align: center;
 }
 
-.footer-contact a {
-  color: #562727;
-  text-decoration: none;
-  transition: 0.3s;
+.footer-nav h2 {
+    font-size: 18px;
+    font-weight: 600;
 }
 
-.footer-contact a:hover {
-  color: #ffb4b4;
+.footer-nav a,
+.footer-nav p {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
 }
 
-.social-links-footer {
-  display: flex;
-  gap: 15px;
-  margin-top: 10px;
+.footer-nav a:hover {
+    color: #FFD6D6;
 }
 
-.social-links-footer img {
-  width: 35px;
-  height: 35px;
-  border-radius: 8px;
-  background-color: #ffb4b4;
-  padding: 5px;
-  transition: 0.3s;
+/* Social Icons Row */
+.footer-social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
 }
 
-.social-links-footer img:hover {
-  background-color: #bd5050;
+.footer-social-icons a img {
+    width: 28px;
+    height: 28px;
+    transition: 0.3s;
 }
 
-.footer-bottom {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 14px;
-  color: #562727;
-}
-/* ===================== SMALL MOBILE (<320px) ===================== */
-@media (max-width: 319px) {
-
-    /* Navbar */
-    .logo img { width: 55px; }
-    .nav-link { font-size: 13px; padding: 4px 6px; }
-
-    /* Home */
-    .home-left h1 { font-size: 28px; }
-    .home-left h2 { font-size: 18px; }
-    .home-left .intro { font-size: 14px; }
-    .home-buttons .btn { font-size: 12px; padding: 5px 12px; }
-    .home-right img { max-width: 280px; }
-
-    /* Tiles */
-    .tiles, .tiles1, .tiles2, .education-tiles { grid-template-columns: 1fr; gap: 12px; }
-    .tile, .tile1, .tile2, .education-tile { height: 140px; border-radius: 12px; }
-    .tile-content h3, .tile-content1 h3, .tile-content2 h3, .education-content h3 { font-size: 12px; }
-    .tile-content span, .tile-content2 span, .education-content span { font-size: 10px; }
-
-    /* About Me */
-    .aboutme { flex-direction: column; gap: 15px; }
-    .profile-img { width: 100%; aspect-ratio: 16/9; border-radius: 12px; }
-    .about-section { padding: 12px; }
-    .about-section h1 { font-size: 18px; }
-    .about-section p { font-size: 12px; line-height: 1.4; }
-
-    /* Tabs */
-    .tab { font-size: 10px; padding: 4px 8px; }
-
-    /* Skills */
-    .skill-category h2 { font-size: 20px; }
-    .skill-bar { height: 14px; }
-    .skill-bar-fill { font-size: 11px; line-height: 14px; }
-    .skill .skill-name { font-size: 12px; }
-
-    /* Contact */
-    .contact-wrapper { flex-direction: column; max-width: 90%; }
-    .contact-image img { height: 300px; }
-    .contact-form { padding: 20px; }
-    .contact-form h2 { font-size: 28px; }
-    .contact-form p { font-size: 12px; }
-
-    /* Section headings */
-    #digital-design h1, #film-works h1, #pitik-yanyannieey h1 { font-size: 22px; }
-    #digital-design p, #film-works p, #pitik-yanyannieey p { font-size: 12px; }
-
-    /* Lightbox */
-    #lightbox img { max-width: 90%; max-height: 80%; }
-    #lightbox .close-btn { font-size: 28px; top: 15px; right: 20px; }
+.footer-social-icons a img:hover {
+    transform: scale(1.2);
 }
 
+/* Copyright Row */
+.footer .copyright {
+    font-size: 14px;
+    color: #fff;
+    opacity: 0.7;
+}
 
-/* ===================== MOBILE PORTRAIT (320px - 480px) ===================== */
-@media (min-width: 320px) and (max-width: 480px) {
-
-    /* Navbar */
+.footer .copyright span {
+    font-weight: 600;
+}
+/* ================= RESPONSIVE ================= */
+/* TABLETS (≤ 768px) */
+@media (max-width: 768px) {
+    /* Logo */
     .logo img { width: 65px; }
-    .nav-link { font-size: 15px; padding: 6px 10px; }
 
-    /* Home */
-    .home-left h1 { font-size: 36px; }
-    .home-left h2 { font-size: 24px; }
-    .home-left .intro { font-size: 16px; }
-    .home-buttons .btn { font-size: 14px; padding: 7px 18px; }
-    .home-right img { max-width: 400px; }
+    /* Navigation */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 20px 0;
+        width: 100%;
+        background: linear-gradient(to bottom right, #FFECEC, #B45A5A);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 99;
+    }
+    .nav-links.active { display: flex; }
+    .nav-link { font-size: 16px; }
+    .hamburger { display: flex; z-index: 100; }
+
+    /* Home Section */
+    .home {
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        padding: 0;
+        gap: 0;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .home-left {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .home-left h1,
+    .home-left h2,
+    .home-left .intro {
+        margin: 0;
+        padding: 0;
+    }
+
+    .home-buttons {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+    .home-buttons .btn { padding: 10px 22px; font-size: 15px; }
+
+    /* Image container */
+    .home-right {
+        order: -1;
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        top: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+        height: 260px;
+        border-radius: 12px;
+    }
+    .home-right img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.85;
+        display: block;
+        margin: 0 auto;
+    }
 
     /* Tiles */
-    .tiles, .tiles1, .tiles2, .education-tiles { grid-template-columns: 1fr; gap: 15px; }
-    .tile, .tile1, .tile2, .education-tile { height: 180px; border-radius: 15px; }
-    .tile-content h3, .tile-content1 h3, .tile-content2 h3, .education-content h3 { font-size: 14px; }
-    .tile-content span, .tile-content2 span, .education-content span { font-size: 12px; }
+    .tile { max-width: 180px; height: 180px; }
+    .tiles {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
 
-    /* About Me */
-    .aboutme { flex-direction: column; gap: 20px; }
-    .profile-img { width: 100%; aspect-ratio: 4/3; border-radius: 15px; }
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        text-align: center;
+    }
+    .footer-nav { text-align: center; }
+    .footer-social-icons { justify-content: center; }
+}
+
+/* PHONES (≤ 480px) */
+@media (max-width: 480px) {
+    .logo img { width: 60px; }
+
+    .home-left h1 { font-size: 36px; }
+    .home-left h2 { font-size: 22px; }
+    .home-left .intro { font-size: 16px; }
+
+    .home-buttons .btn { padding: 8px 12px; font-size: 13px; }
+
+    .home-right img { width: 100%; max-width: 400px; }
+
+    .tiles {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .tiles-title { font-size: 24px; margin-bottom: 25px; }
+    .tile { height: 150px; }
+    .tile-content h3 { font-size: 15px; }
+
+    .aboutme { flex-direction: column; gap: 25px; }
     .about-section { padding: 20px; }
-    .about-section h1 { font-size: 24px; }
-    .about-section p { font-size: 14px; line-height: 1.5; }
+    .profile-section { width: 100%; }
+    .profile-img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        border-radius: 16px;
+    }
+    .about-img { width: 180px; height: 180px; }
+    .about-right h2 { font-size: 22px; }
+    .about-right p { font-size: 14px; }
 
-    /* Tabs */
     .tab { font-size: 12px; padding: 6px 12px; }
+    .about-education h2 { font-size: 26px; }
+    .about-education .education-desc {
+        font-size: 14px;
+        line-height: 1.5;
+        max-width: 90%;
+        margin-bottom: 30px;
+    }
+    .education-tiles { grid-template-columns: 1fr; gap: 15px; }
+    .education-tile { height: 200px; aspect-ratio: 1; }
+    .education-content h2 { font-size: 18px; }
+    .education-content h3 { font-size: 16px; }
+    .education-content span { font-size: 14px; }
 
-    /* Skills */
     .skill-category h2 { font-size: 24px; }
     .skill-bar { height: 18px; }
     .skill-bar-fill { font-size: 13px; line-height: 18px; }
     .skill .skill-name { font-size: 14px; }
 
-    /* Contact */
+    .tiles2 { grid-template-columns: 1fr; gap: 15px; }
+    .tile2 { height: 180px; }
+    .tile-content2 h3 { font-size: 14px; }
+    .tile-content2 span { font-size: 11px; }
+
+    #works p { font-size: 14px; padding: 0 10px; }
+    #digital-design, #film-works, #pitik-yanyannieey { padding: 50px 5%; }
+    #digital-design h1, #film-works h1, #pitik-yanyannieey h1 { font-size: 28px; }
+    #digital-design p, #film-works p, #pitik-yanyannieey p { font-size: 13px; }
+
+    .tiles, .tiles1, .tiles2 { grid-template-columns: 1fr; }
+    .tile, .tile1, .tile2 {
+        height: 180px;
+        gap: 16px;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+    #lightbox img { max-width: 95%; max-height: 80%; }
+
     .contact-wrapper { flex-direction: column; max-width: 90%; }
     .contact-image img { height: 400px; }
     .contact-form { padding: 30px; }
     .contact-form h2 { font-size: 36px; }
-    .contact-form p { font-size: 14px; }
+    .contact-form p { font-size: 15px; }
 
-    /* Section headings */
-    #digital-design h1, #film-works h1, #pitik-yanyannieey h1 { font-size: 28px; }
-    #digital-design p, #film-works p, #pitik-yanyannieey p { font-size: 13.5px; }
-
-    /* Lightbox */
-    #lightbox img { max-width: 95%; max-height: 85%; }
-    #lightbox .close-btn { font-size: 32px; top: 20px; right: 25px; }
+    /* Footer */
+    .footer { padding: 30px 5%; }
+    .footer-nav h2 { font-size: 16px; }
+    .footer-nav a, .footer-nav p { font-size: 14px; }
+    .footer-social-icons a img { width: 24px; height: 24px; }
+    .footer .copyright { font-size: 13px; }
 }
 
+/* SMALL PHONES (≤ 360px) */
+@media (max-width: 360px) {
+    .logo img { width: 48px; }
+    .nav-link { font-size: 14px; }
+    .nav-links { gap: 18px; }
+    .hamburger span { width: 20px; height: 3px; }
 
-/* ===================== MOBILE LANDSCAPE / TABLETS (481px - 768px) ===================== */
-@media (min-width: 481px) and (max-width: 768px) {
+    .home-left h1 { font-size: 32px; }
+    .home-left h2 { font-size: 20px; }
+    .home-left .intro { font-size: 15px; }
+    .home-buttons .btn { padding: 6px 10px; font-size: 12px; }
+    .home-right { height: 200px; }
 
-    /* Navbar */
-    .logo img { width: 80px; }
-    .nav-link { font-size: 16px; padding: 6px 12px; }
+    .tile { max-width: 140px; height: 140px; }
+    .tiles { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 12px; }
 
-    /* Home */
-    .home-left h1 { font-size: 44px; }
-    .home-left h2 { font-size: 28px; }
-    .home-left .intro { font-size: 17px; }
-    .home-buttons .btn { font-size: 16px; padding: 10px 22px; }
-    .home-right img { max-width: 500px; }
+    /* Footer */
+    .footer { padding: 25px 5%; }
+    .footer-nav h2 { font-size: 15px; }
+    .footer-nav a, .footer-nav p { font-size: 13px; }
+    .footer-social-icons a img { width: 22px; height: 22px; }
+    .footer .copyright { font-size: 12px; }
+}
 
-    /* Tiles */
-    .tiles, .tiles1, .tiles2, .education-tiles { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .tile, .tile1, .tile2, .education-tile { height: 220px; border-radius: 15px; }
-    .tile-content h3, .tile-content1 h3, .tile-content2 h3, .education-content h3 { font-size: 16px; }
-    .tile-content span, .tile-content2 span, .education-content span { font-size: 14px; }
+/* EXTRA SMALL PHONES (≤ 320px) */
+@media (max-width: 320px) {
+    .logo img { width: 42px; }
+    .nav-link { font-size: 13px; padding: 3px 6px; }
+    .nav-links { gap: 15px; }
+    .hamburger span { width: 18px; height: 3px; }
 
-    /* About Me */
-    .aboutme { flex-direction: row; gap: 25px; }
-    .profile-img { width: 100%; aspect-ratio: 4/3; border-radius: 16px; }
-    .about-section { padding: 25px; }
-    .about-section h1 { font-size: 28px; }
-    .about-section p { font-size: 16px; line-height: 1.6; }
+    .home-left h1 { font-size: 28px; }
+    .home-left h2 { font-size: 18px; }
+    .home-left .intro { font-size: 14px; }
+    .home-buttons .btn { padding: 5px 8px; font-size: 11px; }
+    .home-right { height: 180px; }
 
-    /* Tabs */
-    .tab { font-size: 13px; padding: 7px 14px; }
+    .tile { max-width: 120px; height: 120px; }
+    .tiles { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 10px; }
 
-    /* Skills */
-    .skill-category h2 { font-size: 26px; }
-    .skill-bar { height: 20px; }
-    .skill-bar-fill { font-size: 14px; line-height: 20px; }
-    .skill .skill-name { font-size: 15px; }
-
-    /* Contact */
-    .contact-wrapper { flex-direction: row; gap: 20px; max-width: 100%; }
-    .contact-image img { height: 450px; }
-    .contact-form { padding: 35px; }
-    .contact-form h2 { font-size: 38px; }
-    .contact-form p { font-size: 16px; }
-
-    /* Section headings */
-    #digital-design h1, #film-works h1, #pitik-yanyannieey h1 { font-size: 32px; }
-    #digital-design p, #film-works p, #pitik-yanyannieey p { font-size: 14px; line-height: 1.6; }
-
-    /* Lightbox */
-    #lightbox img { max-width: 95%; max-height: 85%; }
-    #lightbox .close-btn { font-size: 36px; top: 25px; right: 30px; }
+    /* Footer */
+    .footer { padding: 20px 5%; }
+    .footer-nav h2 { font-size: 14px; }
+    .footer-nav a, .footer-nav p { font-size: 12px; }
+    .footer-social-icons a img { width: 20px; height: 20px; }
+    .footer .copyright { font-size: 11px; }
 }
