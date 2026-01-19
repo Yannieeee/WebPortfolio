@@ -1700,6 +1700,139 @@ body {
 }
 
 
+@media (max-width: 768px) {
+
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .contact-image img {
+    max-width: 100%;
+    max-height: 450px;
+  }
+
+  .contact-form {
+    max-width: 600px;
+    padding: 30px;
+  }
+
+  .form-row {
+    flex-direction: column; /* ✅ name & email full width */
+  }
+
+  .contact-form h2 {
+    font-size: 36px;
+  }
+
+  .contact-form p {
+    font-size: 15px;
+  }
+}
+
+/* ================= CONTACT SECTION RESPONSIVE (FIXED OVERFLOW) ================= */
+
+/* BASE FIX: make all elements use border-box */
+#contact, #contact * {
+  box-sizing: border-box;
+}
+
+/* TABLETS (≤ 768px) */
+@media (max-width: 768px) {
+
+  #contact {
+    padding: 60px 5%;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;       /* stack image + form */
+    width: 100%;                  /* full width */
+    max-width: 100%;              /* no fixed max-width */
+    margin: 0 auto;
+    border-width: 4px;            /* keep border */
+    border-radius: 20px;
+  }
+
+  .contact-image,
+  .contact-form {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+  }
+
+  .contact-image img {
+    width: 100%;
+    height: auto;                 /* scale image proportionally */
+    max-height: 450px;
+    display: block;
+  }
+
+  .form-row {
+    flex-direction: column;       /* stack Name + Email */
+    gap: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;                  /* full width inside wrapper */
+    padding: 12px 15px;
+    box-sizing: border-box;       /* include padding in width */
+  }
+
+  .contact-form {
+    padding: 30px;
+  }
+
+  .contact-form h2 { font-size: 36px; }
+  .contact-form p { font-size: 15px; }
+}
+
+/* PHONES (≤ 480px) */
+@media (max-width: 480px) {
+
+  #contact { padding: 50px 4%; }
+
+  .contact-image img { max-height: 360px; }
+
+  .contact-form { padding: 25px 15px; }
+  .contact-form h2 { font-size: 30px; }
+  .contact-form p { font-size: 14px; }
+
+  .form-group input,
+  .form-group textarea { font-size: 14px; }
+}
+
+/* SMALL PHONES (≤ 360px) */
+@media (max-width: 360px) {
+
+  #contact { padding: 45px 3%; }
+
+  .contact-image img { max-height: 300px; }
+
+  .contact-form { padding: 20px 12px; }
+  .contact-form h2 { font-size: 26px; }
+
+  .form-group input,
+  .form-group textarea { font-size: 13px; }
+}
+
+/* EXTRA SMALL PHONES (≤ 320px) */
+@media (max-width: 320px) {
+
+  #contact { padding: 40px 2.5%; }
+
+  .contact-image img { max-height: 260px; }
+
+  .contact-form { padding: 15px 10px; }
+  .contact-form h2 { font-size: 22px; }
+
+  .form-group input,
+  .form-group textarea { font-size: 12px; }
+}
+
+
 /* ===============================
    FOOTER RESPONSIVE
 ================================ */
